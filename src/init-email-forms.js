@@ -20,25 +20,28 @@ export default function initEmailForms ({
   mainButtonText = "Sign up",
   closeButtonText = "Close"
 }) {
-  if (showDebugNotice) {
-    initDebugNotice();
-  }
+  domReady(() => {
 
-  // add modal HTML to page and keep track of relevant modal elements
-  initModal({onSubmit, imageSrc, headingText, descriptionText, mainButtonText});
-
-  // keeps track of scroll position, page views, time on site, etc.
-  initDataWatchers();
-
-  // listens to page data and determines if modal is openable
-  initModalDataWatchers({websiteType, beSlightlyMoreAggressive});
-
-  onExitIntent(function () {
-    if (globals.isModalOpenable()) {
-      openModal({imageSrc, headingText, descriptionText, mainButtonText, closeButtonText});
+    if (showDebugNotice) {
+      initDebugNotice();
     }
-  });
 
+    // add modal HTML to page and keep track of relevant modal elements
+    initModal({onSubmit, imageSrc, headingText, descriptionText, mainButtonText});
+
+    // keeps track of scroll position, page views, time on site, etc.
+    initDataWatchers();
+
+    // listens to page data and determines if modal is openable
+    initModalDataWatchers({websiteType, beSlightlyMoreAggressive});
+
+    onExitIntent(function () {
+      if (globals.isModalOpenable()) {
+        openModal({imageSrc, headingText, descriptionText, mainButtonText, closeButtonText});
+      }
+    });
+
+  });
 }
 
 

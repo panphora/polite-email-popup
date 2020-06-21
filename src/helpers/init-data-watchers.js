@@ -1,6 +1,5 @@
 import {throttle} from "stormcloud";
 import globals from "./globals";
-import domReady from "./dom-ready";
 
 function getScrollPercentage () {
   // get the scroll height of the document (https://javascript.info/size-and-scroll-window#width-height-of-the-document) 
@@ -23,9 +22,7 @@ let setCurrentScrollPercentageThrottled = throttle(1000, function () {
 export default function initDataWatchers () {
   globals.incrementSitePageViews();
 
-  domReady(function () {
-    window.addEventListener('scroll', setCurrentScrollPercentageThrottled);
-  });
+  window.addEventListener('scroll', setCurrentScrollPercentageThrottled);
 }
 
 

@@ -1,4 +1,3 @@
-import domReady from "./dom-ready";
 import MiniEvents from "./mini-events";
 
 const validDataEventTypes = ["pageViews", "highestScrollPercentage", "activeTimeOnSite", "activeTimeOnPage"];
@@ -51,13 +50,11 @@ export default function initDebugNotice () {
     eventDebugElement.innerText = isOpenable ? "true" : "false";
   });
 
-  domReady(function () {
-    document.body.insertAdjacentHTML("beforeend", debugNoticeHtml);
+  document.body.insertAdjacentHTML("beforeend", debugNoticeHtml);
 
-    // reset button
-    document.querySelector(".debug-emails-forms__reset").addEventListener("click", e => {
-      window.localStorage.clear(); 
-      window.location.reload();
-    });
+  // reset button
+  document.querySelector(".debug-emails-forms__reset").addEventListener("click", e => {
+    window.localStorage.clear(); 
+    window.location.reload();
   });
 }
