@@ -1,9 +1,9 @@
-import PoliteEmailForms from "../../dist/polite-newsletter-forms.modern.js";
+import PoliteEmailPopup from "../../dist/polite-email-popup.modern.js";
 
 // PoliteEmailForms.contentWebsite();
 // PoliteEmailForms.marketingWebsite();
 
-PoliteEmailForms.contentWebsite({
+PoliteEmailPopup.contentWebsite({
   showDebugNotice: true, // remove in production
   imageSrc: "/demo/images/remake-logo-icon.svg",
   headingText: "Sign up for updates",

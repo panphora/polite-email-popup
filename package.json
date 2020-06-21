@@ -35,12 +35,12 @@
   "devDependencies": {
     "esbuild": "^0.4.3",
     "http-server": "^0.12.3",
-    "body-scroll-lock": "^3.0.2"
+    "stormcloud": "^0.5.9",
+    "body-scroll-lock": "^3.0.2",
+    "tigerlily": "^0.6.0"
   },
   "dependencies": {
     "concurrently": "^5.2.0",
-    "microbundle": "^0.12.0",
-    "stormcloud": "^0.5.9",
-    "tigerlily": "^0.6.0"
+    "microbundle": "^0.12.0"
   }
 }

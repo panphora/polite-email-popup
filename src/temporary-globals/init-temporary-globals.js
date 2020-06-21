@@ -1,15 +1,18 @@
 import temporaryGlobals from "./temporary-globals";
 import getElem from "../helpers/get-elem";
 
+window.temporaryGlobals = temporaryGlobals;
+
 const selectors = {
   MODAL_ELEM_SELECTOR: '.email-modal',
   MODAL_FORM_ELEM_SELECTOR: '.email-modal__content',
   MODAL_CLOSE_BUTTON_ELEM_SELECTOR: '.email-modal__close',
 };
 
-export default function initTemporaryGlobals (userDefinedGlobal) {
-  Object.keys(userDefinedGlobal).forEach(key => {
-    temporaryGlobals[key] = userDefinedGlobal[key]
+export default function initTemporaryGlobals (userDefinedGlobals) {
+  console.log(12312312312313213);
+  Object.keys(userDefinedGlobals).forEach(key => {
+    temporaryGlobals[key] = userDefinedGlobals[key]
   });
 
   Object.assign(temporaryGlobals, {

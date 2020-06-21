@@ -27,6 +27,8 @@ export default function initEmailForms ({
   closeButtonText = "Close"
 }) {
 
+  console.log("xxxx");
+
   domReady(() => {
 
     initTemporaryGlobals({showDebugNotice, websiteType, beSlightlyMoreAggressive, imageSrc, headingText, descriptionText, mainButtonText, closeButtonText});
