@@ -35,41 +35,6 @@ export default {
   },
   isModalOpenable () {
     return this.MODAL_IS_OPENABLE;
-  },
-  getHighestScrollPercentage () {
-    return this.HIGHEST_SCROLL_PERCENTAGE;
-  },
-  getActiveTimeOnSite () {
-    return this.ACTIVE_TIME_ON_SITE;
-  },
-  getActiveTimeOnPage () {
-    return this.ACTIVE_TIME_ON_PAGE;
-  },
-  incrementSitePageViews () {
-    let pageViews = db.increment("pageViews");
-    this.SITE_PAGE_VIEWS = pageViews;
-
-    MiniEvents.trigger("pageData", {pageViews});
-  },
-  setHighestScrollPercentage (num) {
-    let savedScrollPercentage = db.get("highestScrollPercentage") || 0;
-
-    let highestScrollPercentage = num > savedScrollPercentage ? num : savedScrollPercentage;
-
-    db.set("highestScrollPercentage", highestScrollPercentage);
-    this.HIGHEST_SCROLL_PERCENTAGE = highestScrollPercentage;
-
-    MiniEvents.trigger("pageData", {highestScrollPercentage});
-  },
-  incrementActiveTimeOnSite (seconds) {
-    let activeTimeOnSite = db.increment("activeTimeOnSite");
-    this.ACTIVE_TIME_ON_SITE = activeTimeOnSite;
-
-    MiniEvents.trigger("pageData", {activeTimeOnSite});
-  },
-  incrementActiveTimeOnPage (seconds) {
-    this.ACTIVE_TIME_ON_PAGE += 1;
-    MiniEvents.trigger("pageData", {activeTimeOnPage: this.ACTIVE_TIME_ON_PAGE});
   }
 }
 
