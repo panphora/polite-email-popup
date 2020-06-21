@@ -1,5 +1,5 @@
+import {throttle} from "stormcloud";
 import globals from "./globals";
-import throttle from "./throttle";
 import domReady from "./dom-ready";
 
 function getScrollPercentage () {
