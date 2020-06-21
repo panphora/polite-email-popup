@@ -1,0 +1,319 @@
+/* common (both email modal & email menu) */
+.email-modal, .bottom-bar {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.email-modal, .email-modal *, .bottom-bar, .bottom-bar * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.email-modal button, .bottom-bar button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
+.email-modal button::-moz-focus-inner, .bottom-bar button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.email-modal .email-modal__sign-up, .bottom-bar .bottom-bar__sign-up, .bottom-bar .bottom-bar__close {
+  padding: 9px 22px 11px;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  color: #fff;
+  background-color: #4263eb;
+  border-radius: 1px;
+}
+
+.bottom-bar .bottom-bar__sign-up, .bottom-bar .bottom-bar__close {
+  padding: 7px 19px 9px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.email-modal .email-modal__sign-up:hover, .bottom-bar .bottom-bar__sign-up:hover {
+  background-color: #364fc7;
+}
+
+.bottom-bar .bottom-bar__close {
+  background-color: #CED4DA;
+  color: #495057;
+}
+
+.bottom-bar .bottom-bar__close:hover {
+  background-color: #ADB5BD;
+  color: #343A40;
+}
+
+/* email modal */
+
+.email-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 1.4;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.email-modal .email-modal__content {
+  transform: translate(0, 1000px);
+  transition: transform .4s;
+  position: relative;
+  width: 480px;
+  max-width: calc(100vw - 3rem);
+  padding: 35px 32px 33px 32px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.24);
+}
+
+.email-modal-is-open .email-modal .email-modal__content {
+  transform: translate(0, 0);
+}
+
+.email-modal .email-modal__top {
+  display: flex;
+  margin-bottom: 1.75rem;
+}
+
+.email-modal .email-modal__top-content {
+}
+
+.email-modal .email-modal__top-media {
+  width: 108px;
+  margin-right: 22px;
+}
+
+.email-modal .email-modal__top-image {
+  box-sizing: content-box;
+  display: block;
+  max-width: 100%;
+  border: 1px solid #DEE2E6;
+  border-radius: 5px;
+}
+
+.email-modal .email-modal__title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: .25rem;
+}
+
+.email-modal .email-modal__description {
+  font-size: 18px;
+  color: #757575;
+}
+
+.email-modal .email-modal__input-container {
+  margin-bottom: 1.75rem;
+}
+
+.email-modal .email-modal__input {
+  display: block;
+  width: 100%;
+  padding: 9px 15px 10px;
+  border: 1px solid #DEE2E6;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.email-modal .email-modal__button-container {
+  text-align: center;
+}
+
+.email-modal .email-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 13px;
+  width: 33px;
+  height: 33px;
+}
+
+.email-modal .email-modal__close:hover::before, .email-modal .email-modal__close:hover::after {
+  background-color: #b1bac4;
+}
+
+.email-modal .email-modal__close::before {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  height: 33px;
+  margin: auto;
+  content: "";
+  background-color: #CED4DA;
+  border-radius: 2px;
+}
+
+.email-modal .email-modal__close::after {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  height: 33px;
+  margin: auto;
+  content: "";
+  background-color: #CED4DA;
+  border-radius: 2px;
+}
+
+@media (max-width: 780px) {
+  .email-modal .email-modal__top {
+    display: block;
+  }
+
+  .email-modal .email-modal__top-media {
+    width: 75px;
+    margin: 0 auto 1.75rem auto;
+  }
+
+  .email-modal .email-modal__top-content {
+    text-align: center;
+  }
+}
+
+/* email menu (bottom bar) */
+
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid #ADB5BD;
+  background-color: #F1F3F5;
+}
+
+.bottom-bar__content {
+  display: flex;
+  padding: 10px 0 11px 0;
+}
+
+.bottom-bar__label {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-bar__label-text {
+  margin-top: -1px;
+  margin-right: 12px;
+  font-weight: 600;
+  color: #343A40;
+}
+
+.bottom-bar__input {
+  margin-right: 11px;
+  padding: 6px 10px 7px;
+  max-width: 300px;
+  width: 31vw;
+  border: 1px solid #ADB5BD;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 1px;
+}
+
+.bottom-bar__sign-up {
+
+}
+
+.bottom-bar__close-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 16px 10px 0;
+}
+
+.bottom-bar__close {
+
+}
+
+
+@media (max-width: 780px) {
+  .bottom-bar__content {
+    align-items: flex-end;
+    padding: 13px 0 18px 0;
+  }
+
+  .bottom-bar__label {
+    display: block;
+  }
+
+  .bottom-bar__label-text {
+    display: block;
+    margin: 0 0 12px 0;
+  }
+
+  .bottom-bar__input {
+    width: 100%;
+  }
+
+  .bottom-bar__close-container {
+    padding: 0;
+    transform: translate(0px, -100%);
+  }
+}
+
+/* debug bar */
+
+.debug-emails-forms {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  padding: 12px 16px;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.35);
+}
+
+.debug-emails-forms__reset {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

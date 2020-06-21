@@ -1,0 +1,46 @@
+{
+  "name": "polite-email-popup",
+  "version": "0.5.0",
+  "description": "A polite email popup",
+  "source": "src/index.js",
+  "main": "dist/polite-email-popup.js",
+  "module": "dist/polite-email-popup.module.js",
+  "unpkg": "dist/polite-email-popup.umd.js",
+  "scripts": {
+    "http-server": "http-server -c-1",
+    "microbundle-watch": "microbundle watch",
+    "build": "microbundle",
+    "dev": "concurrently 'npm:http-server' 'npm:microbundle-watch' --kill-others"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panphora/polite-email-popup.git"
+  },
+  "keywords": [
+    "polite",
+    "exit intent",
+    "newsletter",
+    "popup",
+    "email",
+    "exit",
+    "intent",
+    "signup"
+  ],
+  "author": "panphora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panphora/polite-email-popup/issues"
+  },
+  "homepage": "https://github.com/panphora/polite-email-popup#readme",
+  "devDependencies": {
+    "esbuild": "^0.4.3",
+    "http-server": "^0.12.3",
+    "body-scroll-lock": "^3.0.2"
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "microbundle": "^0.12.0",
+    "stormcloud": "^0.5.9",
+    "tigerlily": "^0.5.1"
+  }
+}
