@@ -1,5 +1,5 @@
 export default function addDebugNoticeHTMLToPage () {
-  const debugNoticeHtml = `<div class="debug-emails-forms">
+  return `<div class="debug-emails-forms">
     <div>
       <b>Page views: </b><span data-event-name="pageViews">0</span>
     </div>
@@ -26,6 +26,4 @@ export default function addDebugNoticeHTMLToPage () {
     </div>
     <button class="debug-emails-forms__reset" type="button">Reset</button>
   </div>`;
-
-  document.body.insertAdjacentHTML("beforeend", debugNoticeHtml);
 }

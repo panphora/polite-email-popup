@@ -1,21 +1,29 @@
 import temporaryGlobals from "./temporary-globals";
-import getElem from "../helpers/get-elem";
-
-window.temporaryGlobals = temporaryGlobals;
-
-const selectors = {
-  MODAL_ELEM_SELECTOR: '.email-modal',
-  MODAL_FORM_ELEM_SELECTOR: '.email-modal__content',
-  MODAL_CLOSE_BUTTON_ELEM_SELECTOR: '.email-modal__close',
-};
+import getElem from "../dom/get-elem";
 
 export default function initTemporaryGlobals (userDefinedGlobals) {
-  console.log(12312312312313213);
-  Object.keys(userDefinedGlobals).forEach(key => {
-    temporaryGlobals[key] = userDefinedGlobals[key]
-  });
+  const SELECTORS = {
+    MODAL_ELEM_SELECTOR: '.email-modal',
+    MODAL_FORM_ELEM_SELECTOR: '.email-modal__content',
+    MODAL_CLOSE_BUTTON_ELEM_SELECTOR: '.email-modal__close',
+    DEBUG_ELEM_RESET_SELECTOR: ".debug-emails-forms__reset"
+  };
 
-  Object.assign(temporaryGlobals, {
+  const defaultGlobals = {
+    
+    // USER DEFAULTS
+    showDebugNotice: false,
+    websiteType: "content", // "content" or "marketing"
+    beSlightlyMoreAggressive: false,
+    onSubmit: () => {console.log("Event: Email form submitted")},
+    imageSrc: "",
+    headingText: "Sign up for updates",
+    descriptionText: "Get cutting edge articles and insights into our process",
+    mainButtonText: "Sign up",
+    closeButtonText: "Close",
+
+    // SYSTEM GLOBALS
+    SELECTORS: SELECTORS,
     WEBSITE_TYPES: {
       CONTENT: "CONTENT",
       MARKETING: "MARKETING"
@@ -23,10 +31,18 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
     IS_MOBILE: window.matchMedia("only screen and (max-width: 780px)").matches,
     FOCUSABLE_SELECTORS: 'a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), *[tabindex]',
     BODY_CLASS_MODAL_OPEN: 'email-modal-is-open',
-    MODAL_ELEM: getElem(selectors.MODAL_ELEM_SELECTOR),
-    MODAL_FORM_ELEM: getElem(selectors.MODAL_FORM_ELEM_SELECTOR),
-    MODAL_CLOSE_BUTTON_ELEM: getElem(selectors.MODAL_CLOSE_BUTTON_ELEM_SELECTOR)
-  });
+
+    // SYSTEM GLOBALS - DEBUG NOTICE
+    DEBUG_UNIT_PAGE_VIEWS: "",
+    DEBUG_UNIT_HIGHEST_SCROLL_PERCENTAGE: "%",
+    DEBUG_UNIT_ACTIVE_TIME_ON_SITE: "s",
+    DEBUG_UNIT_ACTIVE_TIME_ON_PAGE: "s"
+  };
+
+  Object.assign(temporaryGlobals, defaultGlobals, userDefinedGlobals);
+
+  // todo remove
+  window.temporaryGlobals = temporaryGlobals;
 }
 
 

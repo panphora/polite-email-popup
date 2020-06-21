@@ -1,16 +1,11 @@
-import MiniEvents from "./mini-events";
-
-const validDataEventTypes = ["pageViews", "highestScrollPercentage", "activeTimeOnSite", "activeTimeOnPage"];
-const eventValueUnitLookup = {
-  pageViews: "",
-  highestScrollPercentage: "%",
-  activeTimeOnSite: "s",
-  activeTimeOnPage: "s"
-};
-
-
+import initDebugNoticeEventListeners from "./init-debug-notice-event-listeners";
+// keep track of data and modify debug notice when they change
 
 export default function initDebugNotice () {
+  initDebugNoticeEventListeners();
+}
+
+/*
   MiniEvents.listen("pageData", function (dataEvent) {
     let eventName = validDataEventTypes.find(name => dataEvent.hasOwnProperty(name));
     let eventValue = dataEvent[eventName] + eventValueUnitLookup[eventName];
@@ -23,10 +18,4 @@ export default function initDebugNotice () {
     let eventDebugElement = document.querySelector(`.debug-emails-forms [data-event-name='modalIsOpenable']`);
     eventDebugElement.innerText = isOpenable ? "true" : "false";
   });
-
-  // reset button
-  document.querySelector(".debug-emails-forms__reset").addEventListener("click", e => {
-    window.localStorage.clear(); 
-    window.location.reload();
-  });
-}
+*/
