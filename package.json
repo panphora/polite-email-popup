@@ -41,6 +41,6 @@
     "concurrently": "^5.2.0",
     "microbundle": "^0.12.0",
     "stormcloud": "^0.5.9",
-    "tigerlily": "^0.5.1"
+    "tigerlily": "^0.6.0"
   }
 }

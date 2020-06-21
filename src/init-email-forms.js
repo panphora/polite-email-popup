@@ -1,5 +1,11 @@
 import {throttle} from "stormcloud";
 import domReady from "./helpers/dom-ready";
+
+import initTemporaryGlobals from "./temporary-globals/init-temporary-globals";
+import initDomElements from "./helpers/init-dom-elements";
+import initElementGlobals from "./helpers/init-element-globals";
+
+
 import db from "./helpers/localstorage-db";
 import onExitIntent from "./helpers/on-exit-intent";
 import globals from "./helpers/globals";
@@ -10,17 +16,26 @@ import initDebugNotice from "./helpers/init-debug-notice";
 import openModal from "./modal/open-modal";
 
 export default function initEmailForms ({
+  showDebugNotice = false,
   websiteType, // "content" or "marketing"
   beSlightlyMoreAggressive = false,
   onSubmit = () => {},
-  showDebugNotice = false,
   imageSrc = "",
   headingText = "Sign up for updates",
   descriptionText = "Get cutting edge articles and insights into our process",
   mainButtonText = "Sign up",
   closeButtonText = "Close"
 }) {
+
   domReady(() => {
+
+    initTemporaryGlobals({showDebugNotice, websiteType, beSlightlyMoreAggressive, imageSrc, headingText, descriptionText, mainButtonText, closeButtonText});
+
+    // add all HTML elements to the page
+    initDomElements();
+
+    // get all the elements we'll need and add them to the global data
+    initElementGlobals();
 
     if (showDebugNotice) {
       initDebugNotice();
