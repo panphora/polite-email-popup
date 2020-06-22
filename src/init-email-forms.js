@@ -1,4 +1,3 @@
-import {throttle} from "stormcloud";
 import domReady from "./dom/dom-ready";
 
 import initDomElements from "./dom/init-dom-elements";

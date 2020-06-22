@@ -18,12 +18,12 @@ export default function initPersistentGlobals (allOptions) {
 }
 
 function watchCurrentScrollPercentage () {
-  window.addEventListener('scroll', throttle(1000, function () {
+  window.addEventListener('scroll', throttle(function () {
     // will execute once for every second the user is scrolling
     setHighestScrollPercentage();
     persistentGlobals.activeTimeOnPage++;
     persistentGlobals.activeTimeOnSite++;
-  }));
+  }, 1000));
 }
 
 function setHighestScrollPercentage () {
