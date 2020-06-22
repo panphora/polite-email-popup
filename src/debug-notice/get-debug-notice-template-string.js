@@ -1,28 +1,40 @@
 export default function getDebugNoticeTemplateString ({requirements, actual, meetsRequirements}) {
   return `<div class="debug-emails-forms">
     <div>
-      <b>Page views: </b><span data-event-name="pageViews">0</span>
+      <b>Page views: </b>
+      <span>${actual.pageViews} </span>
+      <span>(requires: ${requirements.pageViews}) </span>
     </div>
     <div>
-      <b>Highest scroll percentage: </b><span data-event-name="highestScrollPercentageAcrossAllPages">0%</span>
+      <b>Highest scroll percentage: </b>
+      <span>${actual.highestScrollPercentageAcrossAllPages}% </span>
+      <span>(requires: ${requirements.highestScrollPercentageAcrossAllPages}%) </span>
     </div>
     <div>
-      <b>Time on site: </b><span data-event-name="activeTimeOnSite">0s</span>
+      <b>Active time on site: </b>
+      <span>${actual.activeTimeOnSite}s </span>
+      <span>(requires: ${requirements.activeTimeOnSite}s) </span>
     </div>
     <div>
-      <b>Time on page: </b><span data-event-name="activeTimeOnPage">0s</span>
+      <b>Active time on page: </b>
+      <span>${actual.activeTimeOnPage}s </span>
+      <span>(${requirements.activeTimeOnPage}s) </span>
     </div>
     <div>
-      <b>Saw modal: </b><span>never</span>
+      <b>Saw modal: </b>
+      <span>never</span>
     </div>
     <div>
-      <b>Closed modal: </b><span>never</span>
+      <b>Closed modal: </b>
+      <span>never</span>
     </div>
     <div>
-      <b>Closed bottom bar: </b><span>never</span>
+      <b>Closed bottom bar: </b>
+      <span>never</span>
     </div>
     <div>
-      <b>Modal is openable: </b><span data-event-name="modalIsOpenable">false</span>
+      <b>Modal is openable: </b>
+      <span>${meetsRequirements}</span>
     </div>
     <button class="debug-emails-forms__reset" type="button">Reset</button>
   </div>`;
