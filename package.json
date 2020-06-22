@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/panphora/polite-email-popup#readme",
   "devDependencies": {
+    "body-scroll-lock": "^3.0.2",
     "esbuild": "^0.4.3",
     "http-server": "^0.12.3",
     "stormcloud": "^0.5.9",
-    "body-scroll-lock": "^3.0.2",
-    "tigerlily": "^0.6.0"
+    "tigerlily": "^0.6.1"
   },
   "dependencies": {
     "concurrently": "^5.2.0",

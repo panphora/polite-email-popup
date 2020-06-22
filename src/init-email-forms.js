@@ -7,7 +7,7 @@ import initPersistentGlobals from "./persistent-globals/init-persistent-globals"
 import {persistentGlobals} from "./persistent-globals/persistent-globals";
 
 import initDebugNotice from "./debug-notice/init-debug-notice";
-import initExitIntent from "./modal/init-exit-intent";
+import initModal from "./modal/init-modal";
 
 
 
@@ -21,7 +21,7 @@ export default function initEmailForms (options) {
     // set up all global options and elements we'll need
     initTemporaryGlobals(options);
 
-    // set up global options that need to persist through page loads
+    // set up global options that need to persist through page loads (e.g. page views, scroll percentage, active time on site)
     initPersistentGlobals();
 
     // add debug notice, modal, and bottom bar to the page
@@ -30,14 +30,8 @@ export default function initEmailForms (options) {
     // show a debug notice to keep track of triggers and user engagement
     initDebugNotice();
 
-    // watches for exit intent and opens the modal if it's polite to do so
-    initExitIntent();
-
-    // // add modal HTML to page and keep track of relevant modal elements
-    // initModal();
-
-    // // keeps track of scroll position, page views, time on site, etc.
-    // initDataWatchers();
+    // set up event listeners for email popup
+    initModal();
 
     // // listens to page data and determines if modal is openable
     // initModalDataWatchers();
