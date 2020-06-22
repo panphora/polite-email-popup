@@ -32,9 +32,6 @@ export default function initEmailForms (options) {
     // set up event listeners for email popup
     initModal();
 
-    // // listens to page data and determines if modal is openable
-    // initModalDataWatchers();
-
   });
 }
 
