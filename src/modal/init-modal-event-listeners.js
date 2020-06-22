@@ -1,5 +1,6 @@
-import globals from "../helpers/globals";
-import closeModal from "./close-modal";
+import temporaryGlobals from "../temporary-globals/temporary-globals";
+import initExitIntent from "./init-exit-intent";
+import closeModal from "./modal-actions/close-modal";
 
 export default function initModalEventListeners () {
   globals.modalElem.addEventListener("click", event => onClickModalBackdrop({event}));
