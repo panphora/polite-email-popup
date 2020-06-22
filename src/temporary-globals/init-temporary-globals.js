@@ -3,9 +3,10 @@ import getElem from "../dom/get-elem";
 
 export default function initTemporaryGlobals (userDefinedGlobals) {
   const SELECTORS = {
-    MODAL_ELEM_SELECTOR: '.email-modal',
-    MODAL_FORM_ELEM_SELECTOR: '.email-modal__content',
-    MODAL_CLOSE_BUTTON_ELEM_SELECTOR: '.email-modal__close',
+    MODAL_ELEM_SELECTOR: ".email-modal",
+    MODAL_FORM_ELEM_SELECTOR: ".email-modal__content",
+    MODAL_FORM_INPUT_ELEM_SELECTOR: ".email-signup-form-input",
+    MODAL_CLOSE_BUTTON_ELEM_SELECTOR: ".email-modal__close",
     DEBUG_ELEM_RESET_SELECTOR: ".debug-emails-forms__reset"
   };
 
