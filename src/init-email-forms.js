@@ -17,9 +17,6 @@ import initModal from "./modal/init-modal";
 export default function initEmailForms (options) {
   domReady(() => {
 
-    // trigger the popups when data is right
-    watchTriggerData();
-
     // set up all global options and elements we'll need
     initTemporaryGlobals(options);
 
@@ -34,6 +31,9 @@ export default function initEmailForms (options) {
 
     // set up event listeners for email popup
     initModal();
+
+    // trigger the popups when data is right
+    watchTriggerData();
 
   });
 }

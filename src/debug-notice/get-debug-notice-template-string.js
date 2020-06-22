@@ -1,10 +1,10 @@
-export default function addDebugNoticeHTMLToPage () {
+export default function getDebugNoticeTemplateString ({requirements, actual, meetsRequirements}) {
   return `<div class="debug-emails-forms">
     <div>
       <b>Page views: </b><span data-event-name="pageViews">0</span>
     </div>
     <div>
-      <b>Scroll percentage: </b><span data-event-name="highestScrollPercentage">0%</span>
+      <b>Highest scroll percentage: </b><span data-event-name="highestScrollPercentageAcrossAllPages">0%</span>
     </div>
     <div>
       <b>Time on site: </b><span data-event-name="activeTimeOnSite">0s</span>
