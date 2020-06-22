@@ -1,5 +1,3 @@
-import globals from "../helpers/globals";
-import MiniEvents from "../helpers/mini-events";
 import getTriggerOptions from "./get-trigger-options";
 
 export default function initModalDataWatchers ({websiteType, beSlightlyMoreAggressive}) {

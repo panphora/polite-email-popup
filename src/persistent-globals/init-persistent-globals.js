@@ -11,7 +11,12 @@ import {persistentGlobals} from "./persistent-globals";
 
 */ 
 export default function initPersistentGlobals (allOptions) {
-  persistentGlobals.pageViews++;
+  if (typeof persistentGlobals.pageViews !== "number" || Number.isNaN(persistentGlobals.pageViews)) {
+    persistentGlobals.pageViews = 1;
+  } else {
+    persistentGlobals.pageViews++;
+  }
+
   persistentGlobals.activeTimeOnPage = 0;
 
   watchCurrentScrollPercentage();

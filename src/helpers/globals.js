@@ -1,6 +1,3 @@
-import db from "./localstorage-db";
-import MiniEvents from "./mini-events";
-
 export default {
   WEBSITE_TYPES: {
     CONTENT: "CONTENT",

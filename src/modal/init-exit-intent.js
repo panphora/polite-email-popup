@@ -2,6 +2,8 @@ import {persistentGlobals} from "../persistent-globals/persistent-globals";
 import onExitIntent from "../helpers/on-exit-intent";
 import openModal from "./modal-actions/open-modal";
 
+
+// adds exit intent event listener
 export default function initExitIntent () {
   onExitIntent(() => {
     if (persistentGlobals.isModalOpenable) {

@@ -1,5 +1,11 @@
 import tigerlily from "tigerlily";
 
-const persistentGlobals = tigerlily('polite-email-popup');
+let persistentGlobals;
+
+if (!persistentGlobals) {
+  persistentGlobals = tigerlily('polite-email-popup');
+}
+
+window.persistentGlobals = persistentGlobals; // todo remove
 
 export {tigerlily, persistentGlobals};
