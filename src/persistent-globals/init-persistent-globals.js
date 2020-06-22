@@ -11,15 +11,28 @@ import {persistentGlobals} from "./persistent-globals";
 
 */ 
 export default function initPersistentGlobals (allOptions) {
-  if (typeof persistentGlobals.pageViews !== "number" || Number.isNaN(persistentGlobals.pageViews)) {
+  if (!isNumberDefined(persistentGlobals.pageViews)) {
     persistentGlobals.pageViews = 1;
   } else {
     persistentGlobals.pageViews++;
   }
 
+  if (!isNumberDefined(persistentGlobals.highestScrollPercentageAcrossAllPages)) {
+    persistentGlobals.highestScrollPercentageAcrossAllPages = 0;
+  }
+
+  if (!isNumberDefined(persistentGlobals.activeTimeOnSite)) {
+    persistentGlobals.activeTimeOnSite = 0;
+  }
+
+  // refresh this value for every page
   persistentGlobals.activeTimeOnPage = 0;
 
   watchCurrentScrollPercentage();
+}
+
+function isNumberDefined (val) {
+  return typeof val === "number" && !Number.isNaN(val);
 }
 
 function watchCurrentScrollPercentage () {
