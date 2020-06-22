@@ -55,8 +55,9 @@ export default function meetsTriggerRequirements () {
     highestScrollPercentageAcrossAllPages: minimumsLookup["highestScrollPercentageAcrossAllPages"][websiteType][aggressive]
   }
 
-  console.log({minimums});
-
+  return Object.keys(minimums).every(key => {
+    return persistentGlobals[key] >= minimums[key];
+  });
 }
 
 
