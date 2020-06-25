@@ -11,8 +11,9 @@ export default function watchTriggerData () {
       updateDebugNotice({requirements, actual, meetsRequirements});
     }
 
+    console.log({meetsRequirements, modalIsOpenable: temporaryGlobals.isModalOpenable});
     if (meetsRequirements) {
-      temporaryGlobals.modalIsOpenable = true;
+      temporaryGlobals.isModalOpenable = true;
     }
   });
 }

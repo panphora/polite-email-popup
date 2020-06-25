@@ -14,7 +14,7 @@ export default function openModal() {
   // Trap the tab focus by disable tabbing on all elements outside of your modal.
   // These elements need to be gotten at the time the modal is opened because they may have been added to the page dynamically
   const focusableElements = document.querySelectorAll(temporaryGlobals.FOCUSABLE_SELECTORS);
-  const focusableElementsInModal = globals.modalElem.querySelectorAll(temporaryGlobals.FOCUSABLE_SELECTORS);
+  const focusableElementsInModal = temporaryGlobals.MODAL_ELEM.querySelectorAll(temporaryGlobals.FOCUSABLE_SELECTORS);
   const focusableElementsInModalArray = Array.from(focusableElementsInModal);
   focusableElements.forEach(el => {
     if (!focusableElementsInModalArray.includes(el)) {

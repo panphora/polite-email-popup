@@ -24,7 +24,7 @@ export default function getDebugNoticeTemplateString ({requirements, actual, mee
     <div>
       <b class="label">Active time on page: </b>
       <b>${actual.activeTimeOnPage}s </b>
-      <span class="light-text">(${requirements.activeTimeOnPage}s) </span>
+      <span class="light-text">(requires: ${requirements.activeTimeOnPage}s) </span>
     </div>
     <div>
       <b class="label">Saw modal: </b>
