@@ -1,6 +1,11 @@
 /* common (both email modal & email menu) */
 .email-modal, .bottom-bar {
+  display: none;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.email-modal.show, .bottom-bar.show {
+  display: flex;
 }
 
 .email-modal, .email-modal *, .bottom-bar, .bottom-bar * {
@@ -64,7 +69,6 @@
 /* email modal */
 
 .email-modal {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -206,7 +210,6 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  display: flex;
   justify-content: center;
   width: 100%;
   border-top: 1px solid #ADB5BD;

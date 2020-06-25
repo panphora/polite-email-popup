@@ -1,5 +1,5 @@
 export default function getBottomBarTemplateString ({headingText, mainButtonText, closeButtonText}) {
-  return `<div class="bottom-bar">
+  return `<div class="bottom-bar" aria-hidden="true">
   <form class="bottom-bar__content" method="POST" action="/">
     <label class="bottom-bar__label">
       <span class="bottom-bar__label-text">${headingText}</span>

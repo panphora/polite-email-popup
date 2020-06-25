@@ -1,6 +1,6 @@
 export default function getModalTemplateString ({imageSrc, headingText, descriptionText, mainButtonText}) {
   return `
-<div class="email-modal" role="dialog" aria-labelledby="email-modal-title" aria-describedby="email-modal-description" aria-hidden="true" style="display: none">
+<div class="email-modal" role="dialog" aria-labelledby="email-modal-title" aria-describedby="email-modal-description" aria-hidden="true">
   <form class="email-modal__content" method="POST" action="/">
     <div class="email-modal__top">
       <div class="email-modal__top-media">
