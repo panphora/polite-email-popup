@@ -1,5 +1,5 @@
-import {persistentGlobals} from "../persistent-globals/persistent-globals";
-import temporaryGlobals from "../temporary-globals/temporary-globals";
+import {persistentGlobals} from "../../persistent-globals/persistent-globals";
+import temporaryGlobals from "../../temporary-globals/temporary-globals";
 
 const minimumsLookup = {
   "pageViews": {
@@ -8,38 +8,38 @@ const minimumsLookup = {
       "aggressive": 0
     },
     "marketing": {
-      "notAggressive": 3,
-      "aggressive": 2
+      "notAggressive": 0,
+      "aggressive": 0
     }
   },
   "activeTimeOnPage": {
     "content": {
-      "notAggressive": 8,
-      "aggressive": 6
-    },
-    "marketing": {
-      "notAggressive": 8,
-      "aggressive": 6
-    }
-  },
-  "activeTimeOnSite": {
-    "content": {
-      "notAggressive": 30,
-      "aggressive": 20
-    },
-    "marketing": {
-      "notAggressive": 30,
-      "aggressive": 20
-    }
-  },
-  "highestScrollPercentageAcrossAllPages": {
-    "content": {
-      "notAggressive": 35,
-      "aggressive": 25
+      "notAggressive": 0,
+      "aggressive": 0
     },
     "marketing": {
       "notAggressive": 0,
       "aggressive": 0
+    }
+  },
+  "activeTimeOnSite": {
+    "content": {
+      "notAggressive": 15,
+      "aggressive": 10
+    },
+    "marketing": {
+      "notAggressive": 15,
+      "aggressive": 10
+    }
+  },
+  "highestScrollPercentageAcrossAllPages": {
+    "content": {
+      "notAggressive": 25,
+      "aggressive": 20
+    },
+    "marketing": {
+      "notAggressive": 25,
+      "aggressive": 20
     }
   }
 };
