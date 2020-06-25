@@ -5,7 +5,7 @@ export default function openModal() {
   temporaryGlobals.activeElement = document.activeElement;
 
   // show the modal
-  temporaryGlobals.MODAL_ELEM.classList.add("show");;
+  temporaryGlobals.MODAL_ELEM.classList.add("show");
   document.body.classList.add(temporaryGlobals.BODY_CLASS_MODAL_OPEN);
   
   // Focus the first element within the modal. Make sure the element is visible and doesnt have focus disabled (tabindex=-1);
