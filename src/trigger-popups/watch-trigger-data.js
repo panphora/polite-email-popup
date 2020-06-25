@@ -5,13 +5,13 @@ import updateDebugNotice from "../debug-notice/update-debug-notice";
 
 export default function watchTriggerData () {
   tigerlily.on("*", function ({prop, path, oldValue, value}) {
-    let [meetsRequirements, requirements, actual] = modalMeetsTriggerRequirements();
+    let [modalMeetsRequirements, modalRequirements, modalActualValues] = modalMeetsTriggerRequirements();
 
     if (temporaryGlobals.showDebugNotice) {
-      updateDebugNotice({requirements, actual, meetsRequirements});
+      updateDebugNotice({modalRequirements, modalActualValues, modalMeetsRequirements});
     }
 
-    if (meetsRequirements) {
+    if (modalMeetsRequirements) {
       temporaryGlobals.isModalOpenable = true;
     }
   });
