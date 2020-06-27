@@ -1,47 +1,51 @@
 import temporaryGlobals from "../temporary-globals/temporary-globals";
 
-export default function getDebugNoticeTemplateString ({modalRequirements, modalActualValues, modalMeetsRequirements}) {
-  return `<div class="debug-emails-forms">
+export default function getDebugNoticeTemplateString ({modalRequirements, modalActualValues, modalMeetsRequirements, bottomBarRequirements, bottomBarActualValues, bottomBarMeetsRequirements}) {
+  console.log({bottomBarRequirements});
+  return `<div class="debug-email-forms">
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Website type: </span>
+    <span class="debug-email-forms__stat-value">${temporaryGlobals.websiteType.charAt(0).toUpperCase() + temporaryGlobals.websiteType.slice(1)} website</span>
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Page views: </span>
+    <span class="debug-email-forms__stat-value">${modalActualValues.pageViews}</span>
     <div>
-      <b class="label">Website type: </b>
-      <b>${temporaryGlobals.websiteType.charAt(0).toUpperCase() + temporaryGlobals.websiteType.slice(1)} website</b>
+      <div class="debug-email-forms__stat-requirement">(modal requires: ${modalRequirements.pageViews})</div>
+      <div class="debug-email-forms__stat-requirement">(bottom bar requires: ${bottomBarRequirements.pageViews})</div>
     </div>
-    <div>
-      <b class="label">Page views: </b>
-      <b>${modalActualValues.pageViews} </b>
-      <span class="light-text">(requires: ${modalRequirements.pageViews}) </span>
-    </div>
-    <div>
-      <b class="label">Highest scroll percentage: </b>
-      <b>${modalActualValues.highestScrollPercentageAcrossAllPages}% </b>
-      <span class="light-text">(requires: ${modalRequirements.highestScrollPercentageAcrossAllPages}%) </span>
-    </div>
-    <div>
-      <b class="label">Active time on site: </b>
-      <b>${modalActualValues.activeTimeOnSite}s </b>
-      <span class="light-text">(requires: ${modalRequirements.activeTimeOnSite}s) </span>
-    </div>
-    <div>
-      <b class="label">Active time on page: </b>
-      <b>${modalActualValues.activeTimeOnPage}s </b>
-      <span class="light-text">(requires: ${modalRequirements.activeTimeOnPage}s) </span>
-    </div>
-    <div>
-      <b class="label">Saw modal: </b>
-      <span>never</span>
-    </div>
-    <div>
-      <b class="label">Closed modal: </b>
-      <span>never</span>
-    </div>
-    <div>
-      <b class="label">Closed bottom bar: </b>
-      <span>never</span>
-    </div>
-    <div>
-      <b class="label">Modal is openable: </b>
-      ${modalMeetsRequirements ? '<b class="green">Yes</b>' : '<b class="red">No</b>'}
-    </div>
-    <button class="debug-emails-forms__reset" type="button">Reset</button>
-  </div>`;
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Highest scroll percentage: </span>
+    <span class="debug-email-forms__stat-value">${modalActualValues.highestScrollPercentageAcrossAllPages}% </span>
+    <span class="debug-email-forms__stat-requirement">(requires: ${modalRequirements.highestScrollPercentageAcrossAllPages}%) </span>
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Active time on site: </span>
+    <span class="debug-email-forms__stat-value">${modalActualValues.activeTimeOnSite}s </span>
+    <span class="debug-email-forms__stat-requirement">(requires: ${modalRequirements.activeTimeOnSite}s) </span>
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Active time on page: </span>
+    <span class="debug-email-forms__stat-value">${modalActualValues.activeTimeOnPage}s </span>
+    <span class="debug-email-forms__stat-requirement">(requires: ${modalRequirements.activeTimeOnPage}s) </span>
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Saw modal: </span>
+    <span class="debug-email-forms__stat-value">never</span>
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Closed modal: </span>
+    <span class="debug-email-forms__stat-value">never</span>
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Closed bottom bar: </span>
+    <span class="debug-email-forms__stat-value">never</span>
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Modal is openable: </span>
+    ${modalMeetsRequirements ? '<span class="debug-email-forms__stat-value debug-email-forms__stat-value--success">Yes</span>' : '<span class="debug-email-forms__stat-value debug-email-forms__stat-value--fail">No</span>'}
+  </div>
+  <button class="debug-email-forms__reset" type="button">Reset</button>
+</div>`;
 }

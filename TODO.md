@@ -6,6 +6,7 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 // NEXT
 
 *Polite Email Popup*
+Updating debug notice
 [ ] Style bottom bar for mobile
 [ ] Trigger bottom bar when appropriate
 [ ] Don't trigger modal/bottom bar again for a few days if they were closed

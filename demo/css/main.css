@@ -287,7 +287,7 @@
 
 /* debug bar */
 
-.debug-emails-forms {
+.debug-email-forms {
   position: fixed;
   top: 18px;
   right: 24px;
@@ -300,30 +300,35 @@
   border-radius: 5px;
 }
 
-.debug-emails-forms > div {
+.debug-email-forms .debug-email-forms__stat {
   margin-bottom: 4px;
 }
 
-.debug-emails-forms__reset {
+.debug-email-forms .debug-email-forms__reset {
   margin-top: 10px;
 }
 
-.debug-emails-forms .label {
+.debug-email-forms .debug-email-forms__stat-label {
+  font-weight: bold;
   color: #ae3ec9;
 }
 
-.debug-emails-forms .light-text {
+.debug-email-forms .debug-email-forms__stat-value {
+  font-weight: bold;
+  color: #212529;
+}
+
+.debug-email-forms .debug-email-forms__stat-requirement {
   color: #868e96;
 }
 
-.debug-emails-forms .red {
-  color: #e03131;
-}
-
-.debug-emails-forms .green {
+.debug-email-forms .debug-email-forms__stat-value--success {
   color: #2f9e44;
 }
 
+.debug-email-forms .debug-email-forms__stat-value--fail {
+  color: #e03131;
+}
 
 
 
