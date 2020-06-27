@@ -9,7 +9,8 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
     MODAL_CLOSE_BUTTON_ELEM_SELECTOR: ".email-modal__close",
     BOTTOM_BAR_ELEM_SELECTOR: ".bottom-bar",
     DEBUG_ELEM: ".polite-email-popup__debug-notice",
-    DEBUG_ELEM_RESET_SELECTOR: ".debug-email-forms__reset"
+    DEBUG_ELEM_RESET_SELECTOR: ".debug-email-forms__reset",
+    DEBUG_ELEM_BYPASS_SELECTOR: ".debug-email-forms__bypass"
   };
 
   const defaultGlobals = {

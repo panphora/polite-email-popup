@@ -9,9 +9,11 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 [√] Updating debug notice
 [√] Trigger bottom bar when requirements are met
 [√] Fix: trigger requirements should be checked immediately
-[ ] Style bottom bar for mobile
-[ ] Fix: bottom bar should appearing below modal backdrop
-[ ] Don't trigger modal/bottom bar again for a few days if they were closed
+[√] Style bottom bar for mobile
+[ ] Fix: bottom bar should appear below modal backdrop
+[ ] Close bottom bar after clicking close button
+[ ] Allow bottom bar form to submit email
+[ ] If closed in past 2 days, don't open email forms again
 [ ] Work on the README (stretch goal)
 
 - style bottom bar for mobile

@@ -66,6 +66,7 @@
 /* email modal */
 
 .email-modal {
+  z-index: 100;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -204,6 +205,7 @@
 /* email menu (bottom bar) */
 
 .bottom-bar {
+  z-index: 99;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -338,8 +340,13 @@
   margin-bottom: 4px;
 }
 
+.debug-email-forms .debug-email-forms__buttons {
+  margin-bottom: 10px; 
+}
+
 .debug-email-forms .debug-email-forms__reset {
   margin-top: 10px;
+  margin-right: 8px;
 }
 
 .debug-email-forms .debug-email-forms__stat-label {
