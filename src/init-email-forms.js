@@ -5,8 +5,9 @@ import initTemporaryGlobals from "./temporary-globals/init-temporary-globals";
 import initPersistentGlobals from "./persistent-globals/init-persistent-globals";
 import initDomElements from "./dom/init-dom-elements";
 
-import initDebugNotice from "./debug-notice/init-debug-notice";
-import initModal from "./modal/init-modal";
+import initDebugNoticeEventListeners from "./debug-notice/init-debug-notice-event-listeners";
+import initModalEventListeners from "./modal/init-modal-event-listeners";
+import initBottomBarEventListeners from "./bottom-bar/init-bottom-bar-event-listeners";
 
 
 
@@ -37,6 +38,9 @@ export default function initEmailForms (options) {
 
     // set up event listeners for email popup
     initModal();
+
+    // set up event listeners for email popup
+    initBottomBarEventListeners();
 
   });
 }
