@@ -8,8 +8,9 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 *Polite Email Popup*
 [√] Updating debug notice
 [√] Trigger bottom bar when requirements are met
+[√] Fix: trigger requirements should be checked immediately
 [ ] Style bottom bar for mobile
-[ ] Fix bottom bar appearing above modal
+[ ] Fix: bottom bar should appearing below modal backdrop
 [ ] Don't trigger modal/bottom bar again for a few days if they were closed
 [ ] Work on the README (stretch goal)
 

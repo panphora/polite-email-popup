@@ -20,20 +20,23 @@ export default function initEmailForms (options) {
     // set up all global options and elements we'll need
     initTemporaryGlobals(options);
 
-    // set up global options that need to persist through page loads (e.g. page views, scroll percentage, active time on site)
-    initPersistentGlobals();
-
-    // add debug notice, modal, and bottom bar to the page
+    // add debug notice, modal, and bottom bar to the page 
+    // (relies on selectors in temporary globals being defined)
     initDomElements();
 
-    // show a debug notice to keep track of triggers and user engagement
+    // trigger the popups when data is right 
+    // (relies on DOM elements being present)
+    watchTriggerData();
+
+    // set up global options that need to persist through page loads (e.g. page views, scroll percentage, active time on site)
+    // (should be called after trigger data watchers, so they'll trigger immediately on page load)
+    initPersistentGlobals();
+
+    // set up event listeners for debug notice
     initDebugNotice();
 
     // set up event listeners for email popup
     initModal();
-
-    // trigger the popups when data is right
-    watchTriggerData();
 
   });
 }

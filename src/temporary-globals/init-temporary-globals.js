@@ -30,13 +30,7 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
     IS_MOBILE: window.matchMedia("only screen and (max-width: 780px)").matches,
     FOCUSABLE_SELECTORS: 'a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), *[tabindex]',
     BODY_CLASS_MODAL_OPEN: 'email-modal-is-open',
-    BODY_CLASS_BOTTOM_BAR_OPEN: 'email-bottom-bar-is-open',
-
-    // SYSTEM GLOBALS - DEBUG NOTICE
-    DEBUG_UNIT_PAGE_VIEWS: "",
-    DEBUG_UNIT_HIGHEST_SCROLL_PERCENTAGE: "%",
-    DEBUG_UNIT_ACTIVE_TIME_ON_SITE: "s",
-    DEBUG_UNIT_ACTIVE_TIME_ON_PAGE: "s"
+    BODY_CLASS_BOTTOM_BAR_OPEN: 'email-bottom-bar-is-open'
   };
 
   Object.assign(temporaryGlobals, defaultGlobals, userDefinedGlobals);
