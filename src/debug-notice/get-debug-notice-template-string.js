@@ -1,7 +1,6 @@
 import temporaryGlobals from "../temporary-globals/temporary-globals";
 
 export default function getDebugNoticeTemplateString ({modalRequirements, modalActualValues, modalMeetsRequirements, bottomBarRequirements, bottomBarActualValues, bottomBarMeetsRequirements}) {
-  console.log({bottomBarRequirements});
   return `<div class="debug-email-forms">
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Website type: </span>

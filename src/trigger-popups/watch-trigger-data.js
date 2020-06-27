@@ -20,7 +20,6 @@ export default function watchTriggerData () {
     }
 
     if (temporaryGlobals.showDebugNotice) {
-      console.log(123, {modalRequirements, modalActualValues, modalMeetsRequirements, bottomBarRequirements, bottomBarActualValues, bottomBarMeetsRequirements});
       updateDebugNotice({modalRequirements, modalActualValues, modalMeetsRequirements, bottomBarRequirements, bottomBarActualValues, bottomBarMeetsRequirements});
     }
 
