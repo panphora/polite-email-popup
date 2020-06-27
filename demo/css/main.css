@@ -318,6 +318,11 @@
   color: #212529;
 }
 
+.debug-email-forms .debug-email-forms__stat-requirements {
+  margin: 6px 0;
+  padding-left: 32px;
+}
+
 .debug-email-forms .debug-email-forms__stat-requirement {
   color: #868e96;
 }

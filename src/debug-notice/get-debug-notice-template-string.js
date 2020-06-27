@@ -10,29 +10,34 @@ export default function getDebugNoticeTemplateString ({modalRequirements, modalA
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Page views: </span>
     <span class="debug-email-forms__stat-value">${modalActualValues.pageViews}</span>
-    <div>
-      <div class="debug-email-forms__stat-requirement">(modal requires: ${modalRequirements.pageViews})</div>
-      <div class="debug-email-forms__stat-requirement">(bottom bar requires: ${bottomBarRequirements.pageViews})</div>
-    </div>
+    <ul class="debug-email-forms__stat-requirements">
+      <li class="debug-email-forms__stat-requirement">Modal requires: ${modalRequirements.pageViews}</li>
+      <li class="debug-email-forms__stat-requirement">Bottom bar requires: ${bottomBarRequirements.pageViews}</li>
+    </ul>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Highest scroll percentage: </span>
     <span class="debug-email-forms__stat-value">${modalActualValues.highestScrollPercentageAcrossAllPages}% </span>
-    <span class="debug-email-forms__stat-requirement">(requires: ${modalRequirements.highestScrollPercentageAcrossAllPages}%) </span>
+    <ul class="debug-email-forms__stat-requirements">
+      <li class="debug-email-forms__stat-requirement">Modal requires: ${modalRequirements.highestScrollPercentageAcrossAllPages}%</li>
+      <li class="debug-email-forms__stat-requirement">Bottom bar requires: ${bottomBarRequirements.highestScrollPercentageAcrossAllPages}%</li>
+    </ul>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Active time on site: </span>
     <span class="debug-email-forms__stat-value">${modalActualValues.activeTimeOnSite}s </span>
-    <span class="debug-email-forms__stat-requirement">(requires: ${modalRequirements.activeTimeOnSite}s) </span>
+    <ul class="debug-email-forms__stat-requirements">
+      <li class="debug-email-forms__stat-requirement">Modal requires: ${modalRequirements.activeTimeOnSite}s</li>
+      <li class="debug-email-forms__stat-requirement">Bottom bar requires: ${bottomBarRequirements.activeTimeOnSite}s</li>
+    </ul>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Active time on page: </span>
     <span class="debug-email-forms__stat-value">${modalActualValues.activeTimeOnPage}s </span>
-    <span class="debug-email-forms__stat-requirement">(requires: ${modalRequirements.activeTimeOnPage}s) </span>
-  </div>
-  <div class="debug-email-forms__stat">
-    <span class="debug-email-forms__stat-label">Saw modal: </span>
-    <span class="debug-email-forms__stat-value">never</span>
+    <ul class="debug-email-forms__stat-requirements">
+      <li class="debug-email-forms__stat-requirement">Modal requires: ${modalRequirements.activeTimeOnPage}s</li>
+      <li class="debug-email-forms__stat-requirement">Bottom bar requires: ${bottomBarRequirements.activeTimeOnPage}s</li>
+    </ul>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Closed modal: </span>
