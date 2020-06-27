@@ -6,12 +6,13 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 // NEXT
 
 *Polite Email Popup*
-[√] Updating debug notice
+[√] Improve debug notice to include all requirements
 [√] Trigger bottom bar when requirements are met
 [√] Fix: trigger requirements should be checked immediately
 [√] Style bottom bar for mobile
 [√] Fix: bottom bar should appear below modal backdrop
-[√] Added a bypass button to skip all requirements while debugging
+[√] Add a bypass button to skip all requirements while debugging
+[√] Add second column to debug notice
 [ ] Close bottom bar after clicking close button
 [ ] Allow bottom bar form to submit email
 [ ] If closed in past 2 days, don't open email forms again

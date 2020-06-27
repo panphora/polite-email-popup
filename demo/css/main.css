@@ -329,7 +329,7 @@
   position: fixed;
   top: 18px;
   right: 24px;
-  max-width: 550px;
+  max-width: 560px;
   padding: 16px 21px;
   line-height: 1.4;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
@@ -359,6 +359,7 @@
 }
 
 .debug-email-forms .debug-email-forms__stat-value {
+  white-space: nowrap;
   font-weight: bold;
   color: #212529;
 }
