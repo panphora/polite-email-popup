@@ -8,7 +8,10 @@ export default function getBottomBarTemplateString ({headingText, mainButtonText
     <button class="bottom-bar__sign-up" type="submit">${mainButtonText}</button>
   </form>
   <div class="bottom-bar__close-container">
-    <button class="bottom-bar__close" type="button">${closeButtonText}</button>
+    <button class="bottom-bar__close" type="button">
+      <span class="hide-mobile">${closeButtonText}</span>
+      <span class="bottom-bar__close-x-icon hide-desktop"><span></span></span>
+    </button>
   </div>
 </div>`;
 }
