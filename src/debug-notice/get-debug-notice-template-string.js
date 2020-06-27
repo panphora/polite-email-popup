@@ -2,13 +2,13 @@ import temporaryGlobals from "../temporary-globals/temporary-globals";
 
 export default function getDebugNoticeTemplateString ({modalRequirements, modalActualValues, modalMeetsRequirements, bottomBarRequirements, bottomBarActualValues, bottomBarMeetsRequirements}) {
   return `<div class="debug-email-forms">
-  <div class="debug-email-forms__buttons">
-    <button class="debug-email-forms__reset" type="button">Reset</button>
-    <button class="debug-email-forms__bypass" type="button">Bypass</button>
-  </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Website type: </span>
     <span class="debug-email-forms__stat-value">${temporaryGlobals.websiteType.charAt(0).toUpperCase() + temporaryGlobals.websiteType.slice(1)} website</span>
+  </div>
+  <div class="debug-email-forms__stat debug-email-forms__stat--buttons">
+    <button class="debug-email-forms__reset" type="button">Reset</button>
+    <button class="debug-email-forms__bypass" type="button">Bypass</button>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Page views: </span>

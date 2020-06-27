@@ -324,9 +324,12 @@
 /* debug bar */
 
 .debug-email-forms {
+  display: flex;
+  flex-wrap: wrap;
   position: fixed;
   top: 18px;
   right: 24px;
+  max-width: 550px;
   padding: 16px 21px;
   line-height: 1.4;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
@@ -337,15 +340,16 @@
 }
 
 .debug-email-forms .debug-email-forms__stat {
-  margin-bottom: 4px;
+  width: 50%;
+  flex: 1 0 auto;
+  margin-bottom: 12px;
 }
 
-.debug-email-forms .debug-email-forms__buttons {
-  margin-bottom: 10px; 
+.debug-email-forms .debug-email-forms__stat--buttons {
+  text-align: right;
 }
 
 .debug-email-forms .debug-email-forms__reset {
-  margin-top: 10px;
   margin-right: 8px;
 }
 
