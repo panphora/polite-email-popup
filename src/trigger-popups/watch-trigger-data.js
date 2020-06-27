@@ -3,6 +3,7 @@ import temporaryGlobals from "../temporary-globals/temporary-globals";
 import updateDebugNotice from "../debug-notice/update-debug-notice";
 import modalMeetsTriggerRequirements from "./modal-requirements/meets-trigger-requirements";
 import bottomBarMeetsTriggerRequirements from "./bottom-bar-requirements/meets-trigger-requirements";
+import openBottomBar from "../bottom-bar/bottom-bar-actions/open-bottom-bar";
 
 export default function watchTriggerData () {
   tigerlily.on("*", function ({prop, path, oldValue, value}) {
@@ -16,7 +17,7 @@ export default function watchTriggerData () {
     }
 
     if (bottomBarMeetsRequirements) {
-      console.log("OPEN BOTTOM BAR");
+      openBottomBar();
     }
 
     if (temporaryGlobals.showDebugNotice) {
