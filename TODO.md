@@ -15,7 +15,7 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 [√] Add second column to debug notice
 [√] Close bottom bar after clicking close button
 [√] Allow bottom bar form to submit email
-[ ] Mark date when modal was closed in persistent globals
+[√] Ability to get date when modal was closed
 [ ] If closed in past 2 days, don't open email forms again
 [ ] Work on the README (stretch goal)
 
