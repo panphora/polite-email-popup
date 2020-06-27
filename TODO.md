@@ -5,8 +5,13 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 
 // NEXT
 
+*Polite Email Popup*
+[ ] Style bottom bar for mobile
+[ ] Trigger bottom bar when appropriate
+[ ] Don't trigger modal/bottom bar again for a few days if they were closed
+[ ] Work on the README (stretch goal)
+
 - style bottom bar for mobile
-- don't show bottom bar by default
 - create data watchers for bottom bar
 - pop up bottom bar when requirements have been met
 - keep track of
@@ -17,6 +22,11 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
   - it was seen before (seen and page reload)
   - it was closed before
   - ^ wait a certain amount of time before this is reset
+- make readme 
+  - explain why it was created
+    - makers need it
+    - but you want to be polite
+  - logo
 
 // Additional important features
 
