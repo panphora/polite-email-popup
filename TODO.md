@@ -13,8 +13,8 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 [√] Fix: bottom bar should appear below modal backdrop
 [√] Add a bypass button to skip all requirements while debugging
 [√] Add second column to debug notice
-[ ] Close bottom bar after clicking close button
-[ ] Allow bottom bar form to submit email
+[√] Close bottom bar after clicking close button
+[√] Allow bottom bar form to submit email
 [ ] If closed in past 2 days, don't open email forms again
 [ ] Work on the README (stretch goal)
 

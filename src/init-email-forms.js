@@ -34,10 +34,10 @@ export default function initEmailForms (options) {
     initPersistentGlobals();
 
     // set up event listeners for debug notice
-    initDebugNotice();
+    initDebugNoticeEventListeners();
 
     // set up event listeners for email popup
-    initModal();
+    initModalEventListeners();
 
     // set up event listeners for email popup
     initBottomBarEventListeners();
