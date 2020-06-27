@@ -9,12 +9,6 @@ import initDebugNoticeEventListeners from "./debug-notice/init-debug-notice-even
 import initModalEventListeners from "./modal/init-modal-event-listeners";
 import initBottomBarEventListeners from "./bottom-bar/init-bottom-bar-event-listeners";
 
-
-
-// import initDataWatchers from "./helpers/init-data-watchers";
-// import initModalDataWatchers from "./modal/init-modal-data-watchers";
-// import initModal from "./modal/init-modal";
-
 export default function initEmailForms (options) {
   domReady(() => {
 

@@ -39,12 +39,6 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
 
   Object.assign(temporaryGlobals, defaultGlobals, userDefinedGlobals);
 
-  temporaryGlobals.websiteType = temporaryGlobals.websiteType.toLowerCase();
-
-  if (temporaryGlobals.websiteType !== "content" && temporaryGlobals.websiteType !== "marketing") {
-    throw Error("websiteType must be set to either 'content' or 'marketing'");
-  }
-
   // todo remove
   window.temporaryGlobals = temporaryGlobals;
 }

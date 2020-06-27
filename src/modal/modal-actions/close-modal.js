@@ -1,11 +1,13 @@
 import { enableBodyScroll } from 'body-scroll-lock';
 import temporaryGlobals from "../../temporary-globals/temporary-globals";
+import {persistentGlobals} from "../../persistent-globals/persistent-globals";
 
 export default function closeModal() {
-  document.body.classList.remove(temporaryGlobals.BODY_CLASS_MODAL_OPEN);
+  // store date it was clsoed
+  persistentGlobals.modalClosedDate = Date.now();
 
-  // TODO: keep track of when the modal was closed
-  // setItemLocalStorage("modalClosedDate", Date.now());
+  // remove body class
+  document.body.classList.remove(temporaryGlobals.BODY_CLASS_MODAL_OPEN);
 
   // hide the modal
   temporaryGlobals.MODAL_ELEM.style.display = 'none';

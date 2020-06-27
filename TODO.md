@@ -19,6 +19,13 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 [ ] If closed in past 2 days, don't open email forms again
 [ ] Work on the README (stretch goal)
 
+
+
+
+
+
+
+
 - style bottom bar for mobile
 - create data watchers for bottom bar
 - pop up bottom bar when requirements have been met

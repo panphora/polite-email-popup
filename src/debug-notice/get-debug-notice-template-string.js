@@ -1,6 +1,9 @@
 import temporaryGlobals from "../temporary-globals/temporary-globals";
+import {getDaysSinceModalClosed} from "../helpers/helpers";
 
 export default function getDebugNoticeTemplateString ({modalRequirements, modalActualValues, modalMeetsRequirements, bottomBarRequirements, bottomBarActualValues, bottomBarMeetsRequirements}) {
+  let daysSinceModalClosed = getDaysSinceModalClosed();
+
   return `<div class="debug-email-forms">
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Website type: </span>
@@ -43,11 +46,11 @@ export default function getDebugNoticeTemplateString ({modalRequirements, modalA
     </ul>
   </div>
   <div class="debug-email-forms__stat">
-    <span class="debug-email-forms__stat-label">Closed modal: </span>
-    <span class="debug-email-forms__stat-value">never</span>
+    <span class="debug-email-forms__stat-label">Modal closed: </span>
+    <span class="debug-email-forms__stat-value">${daysSinceModalClosed ? "never" : daysSinceModalClosed  + " days ago"}</span>
   </div>
   <div class="debug-email-forms__stat">
-    <span class="debug-email-forms__stat-label">Closed bottom bar: </span>
+    <span class="debug-email-forms__stat-label">Bottom bar closed: </span>
     <span class="debug-email-forms__stat-value">never</span>
   </div>
   <div class="debug-email-forms__stat">
