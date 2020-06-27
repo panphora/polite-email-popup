@@ -8,7 +8,7 @@ export default function getDebugNoticeTemplateString ({modalRequirements, modalA
   </div>
   <div class="debug-email-forms__stat debug-email-forms__stat--buttons">
     <button class="debug-email-forms__reset" type="button">Reset</button>
-    <button class="debug-email-forms__bypass" type="button">Bypass</button>
+    <button class="debug-email-forms__bypass" type="button">Bypass requirements</button>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Page views: </span>
