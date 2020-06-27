@@ -47,7 +47,7 @@ export default function getDebugNoticeTemplateString ({modalRequirements, modalA
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Modal closed: </span>
-    <span class="debug-email-forms__stat-value">${daysSinceModalClosed ? "never" : daysSinceModalClosed  + " days ago"}</span>
+    <span class="debug-email-forms__stat-value">${daysSinceModalClosed ? (daysSinceModalClosed.days + " days ago") : "never"}</span>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Bottom bar closed: </span>

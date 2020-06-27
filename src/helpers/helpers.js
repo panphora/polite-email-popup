@@ -9,3 +9,4 @@ export function getDaysSinceModalClosed () {
   let days = Math.floor((Date.now() - modalClosedDate) / (1000 * 60 * 60 * 24));
   return {days};
 }
+
