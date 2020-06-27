@@ -52,14 +52,14 @@
 /* responsive helper: hide on desktop */
 @media (min-width: 780px) {
   .bottom-bar .hide-desktop, .email-modal .hide-desktop {
-    display: none;
+    display: none !important;
   }
 }
 
 /* responsive helper: hide on mobile */
 @media (max-width: 779.9999px) {
   .bottom-bar .hide-mobile, .email-modal .hide-mobile {
-    display: none;
+    display: none !important;
   }
 }
 
