@@ -16,7 +16,7 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 [√] Close bottom bar after clicking close button
 [√] Allow bottom bar form to submit email
 [√] Ability to get date when modal was closed
-[ ] If closed in past 2 days, don't open email forms again
+[√] If closed in past 2 days (48 hours), don't open email forms again
 [ ] Work on the README (stretch goal)
 
 

@@ -47,16 +47,26 @@ export default function getDebugNoticeTemplateString ({modalRequirements, modalA
     </ul>
   </div>
   <div class="debug-email-forms__stat">
-    <span class="debug-email-forms__stat-label">Modal closed: </span>
-    <span class="debug-email-forms__stat-value">${daysSinceModalClosed ? (daysSinceModalClosed.days + " days ago") : "never"}</span>
+    <span class="debug-email-forms__stat-label">Modal was closed: </span>
+    <span class="debug-email-forms__stat-value">${daysSinceModalClosed ? (daysSinceModalClosed.days + ` day${daysSinceModalClosed.days !== 1 ? "s" : ""} ago`) : "never"}</span>
+    <ul class="debug-email-forms__stat-requirements">
+      <li class="debug-email-forms__stat-requirement">Requires: never or 2 days ago</li>
+    </ul>
   </div>
   <div class="debug-email-forms__stat">
-    <span class="debug-email-forms__stat-label">Bottom bar closed: </span>
-    <span class="debug-email-forms__stat-value">${daysSinceBottomBarClosed ? (daysSinceBottomBarClosed.days + " days ago") : "never"}</span>
+    <span class="debug-email-forms__stat-label">Bottom bar was closed: </span>
+    <span class="debug-email-forms__stat-value">${daysSinceBottomBarClosed ? (daysSinceBottomBarClosed.days + ` day${daysSinceBottomBarClosed.days !== 1 ? "s" : ""} ago`) : "never"}</span>
+    <ul class="debug-email-forms__stat-requirements">
+      <li class="debug-email-forms__stat-requirement">Requires: never or 2 days ago</li>
+    </ul>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Modal is openable: </span>
     ${modalMeetsRequirements ? '<span class="debug-email-forms__stat-value debug-email-forms__stat-value--success">Yes</span>' : '<span class="debug-email-forms__stat-value debug-email-forms__stat-value--fail">No</span>'}
+  </div>
+  <div class="debug-email-forms__stat">
+    <span class="debug-email-forms__stat-label">Bottom bar is open: </span>
+    ${bottomBarMeetsRequirements ? '<span class="debug-email-forms__stat-value debug-email-forms__stat-value--success">Yes</span>' : '<span class="debug-email-forms__stat-value debug-email-forms__stat-value--fail">No</span>'}
   </div>
 </div>`;
 }
