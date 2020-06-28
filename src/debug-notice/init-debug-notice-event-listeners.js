@@ -15,6 +15,10 @@ export default function initDebugNoticeEventListeners () {
         persistentGlobals.activeTimeOnPage = 100;
         persistentGlobals.activeTimeOnSite = 100;
         persistentGlobals.highestScrollPercentageAcrossAllPages = 100;
+
+        let oneDay = 1000 * 60 * 60 * 24;
+        persistentGlobals.modalClosedDate = Date.now() - (oneDay * 2);
+        persistentGlobals.bottomBarClosedDate = Date.now() - (oneDay * 2);
       }
 
     });
