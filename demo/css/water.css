@@ -1,0 +1,241 @@
+@charset "UTF-8";
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 10px;
+  color: #dbdbdb;
+  background: #202b38;
+  text-rendering: optimizeLegibility;
+}
+
+.water button, input, textarea {
+  transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, box-shadow 0.1s linear, transform 0.1s ease;
+}
+
+.water h1 {
+  font-size: 2.2em;
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.water h6 {
+  margin-bottom: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.water strong {
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+.water th {
+  font-weight: 600;
+}
+
+.water blockquote {
+  border-left: 4px solid #0096bfab;
+  margin: 1.5em 0em;
+  padding: 0.5em 1em;
+  font-style: italic;
+}
+
+.water blockquote > footer {
+  margin-top: 10px;
+  font-style: normal;
+}
+
+.water blockquote cite {
+  font-style: normal;
+}
+
+.water address {
+  font-style: normal;
+}
+
+.water a[href^='mailto']::before {
+  content: '📧 ';
+}
+
+.water a[href^='tel']::before {
+  content: '📞 ';
+}
+
+.water a[href^='sms']::before {
+  content: '💬 ';
+}
+
+button,
+input[type='submit'],
+input[type='button'],
+.water input[type='checkbox'] {
+  cursor: pointer;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+.water select {
+  display: block;
+}
+
+.water input, select, button, textarea {
+  color: #ffffff;
+  background-color: #161f27;
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+.water select, button, textarea {
+  -webkit-appearance: none;
+}
+
+.water textarea {
+  margin-right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.water button, input[type='submit'], input[type='button'] {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+button:hover,
+input[type='submit']:hover,
+.water input[type='button']:hover {
+  background: #324759;
+}
+
+input:focus,
+select:focus,
+button:focus,
+.water textarea:focus {
+  box-shadow: 0 0 0 2px #0096bfab;
+}
+
+input[type='checkbox']:active,
+input[type='radio']:active,
+input[type='submit']:active,
+input[type='button']:active,
+.water button:active {
+  transform: translateY(2px);
+}
+
+input:disabled,
+select:disabled,
+button:disabled,
+.water textarea:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.water ::-webkit-input-placeholder {
+  color: #a9a9a9;
+}
+
+.water :-ms-input-placeholder {
+  color: #a9a9a9;
+}
+
+.water ::-ms-input-placeholder {
+  color: #a9a9a9;
+}
+
+.water ::placeholder {
+  color: #a9a9a9;
+}
+
+.water a {
+  text-decoration: none;
+  color: #41adff;
+}
+
+.water a:hover {
+  text-decoration: underline;
+}
+
+.water code, kbd {
+  background: #161f27;
+  color: #ffbe85;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.water pre > code {
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+}
+
+.water img {
+  max-width: 100%;
+}
+
+.water hr {
+  border: none;
+  border-top: 1px solid #dbdbdb;
+}
+
+.water table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.water td, th {
+  padding: 6px;
+  text-align: left;
+}
+
+.water th {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.water tbody tr:nth-child(even) {
+  background-color: #161f27;
+}
+
+.water ::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.water ::-webkit-scrollbar-track {
+  background: #161f27;
+  border-radius: 6px;
+}
+
+.water ::-webkit-scrollbar-thumb {
+  background: #324759;
+  border-radius: 6px;
+}
+
+.water ::-webkit-scrollbar-thumb:hover {
+  background: #415c73;
+}
+
+/*# sourceMappingURL=dark.css.map */

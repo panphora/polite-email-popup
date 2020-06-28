@@ -1,7 +1,9 @@
 /* common (both email modal & email menu) */
 .email-modal, .bottom-bar {
   display: none;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  line-height: 1.4;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 .email-modal.show, .bottom-bar.show {
@@ -331,8 +333,9 @@
   right: 24px;
   max-width: 600px;
   padding: 16px 21px;
+  font-size: 16px;
   line-height: 1.4;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   color: #343a40;
   background-color: #fff;
   box-shadow: 1px 3px 6px rgba(0,0,0,.25);

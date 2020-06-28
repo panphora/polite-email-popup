@@ -11,7 +11,7 @@ export default function getDebugNoticeTemplateString ({modalRequirements, modalA
     <span class="debug-email-forms__stat-value">${temporaryGlobals.websiteType.charAt(0).toUpperCase() + temporaryGlobals.websiteType.slice(1)} website</span>
   </div>
   <div class="debug-email-forms__stat debug-email-forms__stat--buttons">
-    <button class="debug-email-forms__reset" type="button">Reset</button>
+    <button class="debug-email-forms__reset" type="button">Reset data</button>
     <button class="debug-email-forms__bypass" type="button">Bypass requirements</button>
   </div>
   <div class="debug-email-forms__stat">
