@@ -10,7 +10,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.water button, input, textarea {
+.water button, .water input, .water textarea {
   transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, box-shadow 0.1s linear, transform 0.1s ease;
 }
 
@@ -19,33 +19,33 @@ body {
   margin-top: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+.water h1,
+.water h2,
+.water h3,
+.water h4,
+.water h5,
 .water h6 {
   margin-bottom: 12px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+.water h1,
+.water h2,
+.water h3,
+.water h4,
+.water h5,
+.water h6,
 .water strong {
   color: #ffffff;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-b,
-strong,
+.water h1,
+.water h2,
+.water h3,
+.water h4,
+.water h5,
+.water h6,
+.water b,
+.water strong,
 .water th {
   font-weight: 600;
 }
@@ -82,19 +82,19 @@ strong,
   content: '💬 ';
 }
 
-button,
-input[type='submit'],
-input[type='button'],
+.water button,
+.water input[type='submit'],
+.water input[type='button'],
 .water input[type='checkbox'] {
   cursor: pointer;
 }
 
-input:not([type='checkbox']):not([type='radio']),
+.water input:not([type='checkbox']):not([type='radio']),
 .water select {
   display: block;
 }
 
-.water input, select, button, textarea {
+.water input, .water select, .water button, .water textarea {
   color: #ffffff;
   background-color: #161f27;
   font-family: inherit;
@@ -107,8 +107,8 @@ input:not([type='checkbox']):not([type='radio']),
   outline: none;
 }
 
-input:not([type='checkbox']):not([type='radio']),
-.water select, button, textarea {
+.water input:not([type='checkbox']):not([type='radio']),
+.water select, .water button, .water textarea {
   -webkit-appearance: none;
 }
 
@@ -119,35 +119,35 @@ input:not([type='checkbox']):not([type='radio']),
   resize: vertical;
 }
 
-.water button, input[type='submit'], input[type='button'] {
+.water button, .water input[type='submit'], .water input[type='button'] {
   padding-right: 30px;
   padding-left: 30px;
 }
 
-button:hover,
-input[type='submit']:hover,
+.water button:hover,
+.water input[type='submit']:hover,
 .water input[type='button']:hover {
   background: #324759;
 }
 
-input:focus,
-select:focus,
-button:focus,
+.water input:focus,
+.water select:focus,
+.water button:focus,
 .water textarea:focus {
   box-shadow: 0 0 0 2px #0096bfab;
 }
 
-input[type='checkbox']:active,
-input[type='radio']:active,
-input[type='submit']:active,
-input[type='button']:active,
+.water input[type='checkbox']:active,
+.water input[type='radio']:active,
+.water input[type='submit']:active,
+.water input[type='button']:active,
 .water button:active {
   transform: translateY(2px);
 }
 
-input:disabled,
-select:disabled,
-button:disabled,
+.water input:disabled,
+.water select:disabled,
+.water button:disabled,
 .water textarea:disabled {
   cursor: not-allowed;
   opacity: .5;

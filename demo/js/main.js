@@ -7,7 +7,7 @@ PoliteEmailPopup.contentWebsite({
   showDebugNotice: true, // remove in production
   imageSrc: "/demo/images/remake-logo-icon.svg",
   headingText: "Sign up for Remake's newsletter",
-  descriptionText: "Let's Remake web development so anyone can build web apps!",
+  descriptionText: "Follow Remake's progress as we change web development",
   onSubmit: function ({event, email}) {
     console.log("FORM SUBMITTED", event, email);
   }

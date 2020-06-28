@@ -12,7 +12,7 @@ export default function getModalTemplateString ({imageSrc, headingText, descript
       </div>
     </div>
     <div class="email-modal__input-container">
-      <input class="email-modal__input email-signup-form-input" type="email" value="" placeholder="you@example.com" required>
+      <input class="email-modal__input email-signup-form-input" type="email" value="" placeholder="Your email address" required>
     </div>
     <div class="email-modal__button-container">
       <button class="email-modal__sign-up" type="submit">${mainButtonText}</button>

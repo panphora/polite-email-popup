@@ -3,7 +3,7 @@ export default function getBottomBarTemplateString ({headingText, mainButtonText
   <form class="bottom-bar__content" method="POST" action="/">
     <label class="bottom-bar__label">
       <span class="bottom-bar__label-text">${headingText}</span>
-      <input class="bottom-bar__input email-signup-form-input" type="email" value="" placeholder="you@example.com" required>
+      <input class="bottom-bar__input email-signup-form-input" type="email" value="" placeholder="Your email address" required>
     </label>
     <button class="bottom-bar__sign-up" type="submit">${mainButtonText}</button>
   </form>
