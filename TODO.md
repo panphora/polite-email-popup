@@ -6,42 +6,24 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 // NEXT
 
 *Polite Email Popup*
-[√] Improve debug notice to include all requirements
-[√] Trigger bottom bar when requirements are met
-[√] Fix: trigger requirements should be checked immediately
-[√] Style bottom bar for mobile
-[√] Fix: bottom bar should appear below modal backdrop
-[√] Add a bypass button to skip all requirements while debugging
-[√] Add second column to debug notice
-[√] Close bottom bar after clicking close button
-[√] Allow bottom bar form to submit email
-[√] Ability to get date when modal was closed
-[√] If closed in past 2 days (48 hours), don't open email forms again
+[ ] Fix: bug with bypassing requirements after modal closed
+    steps
+    - reset data
+    - bypass requirements
+    - trigger modal
+    - close modal
+    - bypass requirements
+    - can't trigger modal again until after refresh
+[ ] Fix: bug with modal triggering even with no time on page
+    - bypass requirements
+    - refresh page
+    - trigger modal instantly (without scrolling)
 [ ] Work on the README (stretch goal)
+    - explain why it was created
+      - makers need it
+      - but you want to be polite
+[ ] Research Mailchimp/Convertkit/Email Octopus integrations
 
-
-
-
-
-
-
-
-- style bottom bar for mobile
-- create data watchers for bottom bar
-- pop up bottom bar when requirements have been met
-- keep track of
-  - if the user saw the modal yet
-  - if the user closed the modal
-  - if the user closed the bottom bar
-- dont trigger modal or bottom bar if
-  - it was seen before (seen and page reload)
-  - it was closed before
-  - ^ wait a certain amount of time before this is reset
-- make readme 
-  - explain why it was created
-    - makers need it
-    - but you want to be polite
-  - logo
 
 // Additional important features
 
