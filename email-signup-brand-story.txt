@@ -1,6 +1,8 @@
-You're an entrepreneur.
+// You're an entrepreneur.
 
-Your email newsletter is your business's lifeblood.
+// Your email newsletter is your business's lifeblood.
+
+// Start here: 
 
 You want an easy way to add some email sign up forms to ALL of your websites without thinking about it!
 
