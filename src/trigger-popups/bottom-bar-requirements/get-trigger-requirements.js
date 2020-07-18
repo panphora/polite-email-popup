@@ -24,12 +24,12 @@ const minimumsLookup = {
   },
   "activeTimeOnSite": {
     "content": {
-      "notAggressive": 15,
-      "aggressive": 10
+      "notAggressive": 10,
+      "aggressive": 7
     },
     "marketing": {
-      "notAggressive": 15,
-      "aggressive": 10
+      "notAggressive": 10,
+      "aggressive": 7
     }
   },
   "highestScrollPercentageAcrossAllPages": {
