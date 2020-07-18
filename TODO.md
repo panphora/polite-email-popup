@@ -6,33 +6,16 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 // NEXT
 
 *Polite Email Popup*
-[x] openModal is being called when it shouldn't be
-    - after opening the modal, keeping it open, and doing an exit intent
-    - after bypassing requirements, closing the modal, and doing an exit intent
-[x] Fix: bug with bypassing requirements after modal closed
-    steps
-    - reset data
-    - bypass requirements
-    - trigger modal
-    - close modal
-    - bypass requirements
-    !!! - can't trigger modal again UNLESS after refresh
-[ ] Fix: can't scroll the page
-    - reset data
-    - bypass requirements
-    - trigger modal
-    - close modal
-    - bypass requirements
-    !!! - can't scroll the page
-[ ] Fix: bug with modal triggering even with no time on page
-    - bypass requirements
-    - refresh page
-    - trigger modal instantly (without scrolling)
-[ ] Work on the README (stretch goal)
+[x] Work on the README (stretch goal)
     - explain why it was created
       - makers need it
       - but you want to be polite
-[ ] Research Mailchimp/Convertkit/Email Octopus integrations
+[ ] Close bottom bar if modal was submitted
+[ ] Close modal if bottom bar was submitted 
+[ ] I think yes: close bottom bar/modal if modal/bottom bar was closed
+[ ] Either show success message after form is submitted or submit the form NOT through Ajax and let the email marketing service take care of the redirect
+[ ] Research Mailchimp AJAX integration
+[ ] Research ConvertKit AJAX integration 
 
 
 // Additional important features
