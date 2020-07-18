@@ -2,6 +2,9 @@ import temporaryGlobals from "../../temporary-globals/temporary-globals";
 import { disableBodyScroll } from 'body-scroll-lock';
 
 export default function openModal() {
+  // ensure modal can't be opened again on the same page load
+  // todo: make this update the debug notice
+  // temporaryGlobals.isModalOpenable = false; 
   temporaryGlobals.activeElement = document.activeElement;
 
   // show the modal
@@ -32,4 +35,5 @@ export default function openModal() {
   });
 
   disableBodyScroll(temporaryGlobals.MODAL_ELEM);
+  console.log("open modal");
 }

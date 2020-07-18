@@ -14,6 +14,8 @@ export default function watchTriggerData () {
 
     if (modalMeetsRequirements) {
       temporaryGlobals.isModalOpenable = true;
+    } else {
+      temporaryGlobals.isModalOpenable = false;
     }
 
     if (bottomBarMeetsRequirements) {

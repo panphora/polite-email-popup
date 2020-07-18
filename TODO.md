@@ -6,6 +6,9 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
 // NEXT
 
 *Polite Email Popup*
+[ ] openModal is being called when it shouldn't be
+    - after opening the modal, keeping it open, and doing an exit intent
+    - after bypassing requirements, closing the modal, and doing an exit intent
 [ ] Fix: bug with bypassing requirements after modal closed
     steps
     - reset data
@@ -13,7 +16,14 @@ https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/
     - trigger modal
     - close modal
     - bypass requirements
-    - can't trigger modal again until after refresh
+    !!! - can't trigger modal again until after refresh
+[ ] Fix: can't scroll the page
+    - reset data
+    - bypass requirements
+    - trigger modal
+    - close modal
+    - bypass requirements
+    !!! - can't scroll the page
 [ ] Fix: bug with modal triggering even with no time on page
     - bypass requirements
     - refresh page
