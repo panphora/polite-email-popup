@@ -7,11 +7,10 @@ export default function closeModal() {
   // store date it was clsoed
   persistentGlobals.modalClosedDate = Date.now();
 
+  // hide the modal
+  temporaryGlobals.MODAL_ELEM.classList.remove("show");
   // remove body class
   document.body.classList.remove(temporaryGlobals.BODY_CLASS_MODAL_OPEN);
-
-  // hide the modal
-  temporaryGlobals.MODAL_ELEM.style.display = 'none';
 
   // Untrap the tab focus by removing tabindex=-1. You should restore previous values if an element had them.    
   const focusableElements = document.querySelectorAll(temporaryGlobals.FOCUSABLE_SELECTORS);
