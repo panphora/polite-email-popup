@@ -1,6 +1,6 @@
 import domReady from "./dom/dom-ready";
 
-import watchTriggerData from "./trigger-popups/watch-trigger-data";
+import {watchTriggerData} from "./trigger-popups/watch-trigger-data";
 import initTemporaryGlobals from "./temporary-globals/init-temporary-globals";
 import initPersistentGlobals from "./persistent-globals/init-persistent-globals";
 import initDomElements from "./dom/init-dom-elements";

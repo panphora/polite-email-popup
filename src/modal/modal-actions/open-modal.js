@@ -1,10 +1,10 @@
 import temporaryGlobals from "../../temporary-globals/temporary-globals";
 import { disableBodyScroll } from 'body-scroll-lock';
+import {whenTriggerDataChanges} from "../../trigger-popups/watch-trigger-data";
 
 export default function openModal() {
-  // ensure modal can't be opened again on the same page load
-  // todo: make this update the debug notice
-  // temporaryGlobals.isModalOpenable = false; 
+
+  // store the active element so it can regain focus after modal is closed
   temporaryGlobals.activeElement = document.activeElement;
 
   // show the modal
@@ -35,5 +35,9 @@ export default function openModal() {
   });
 
   disableBodyScroll(temporaryGlobals.MODAL_ELEM);
-  console.log("open modal");
+
+  temporaryGlobals.isModalOpen = true;
+  // manually recompute `isModalOpenable` because temporary globals don't trigger this automatically
+  whenTriggerDataChanges();
+
 }

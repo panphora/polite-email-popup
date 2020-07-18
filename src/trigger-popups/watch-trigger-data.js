@@ -5,26 +5,28 @@ import modalMeetsTriggerRequirements from "./modal-requirements/meets-trigger-re
 import bottomBarMeetsTriggerRequirements from "./bottom-bar-requirements/meets-trigger-requirements";
 import openBottomBar from "../bottom-bar/bottom-bar-actions/open-bottom-bar";
 
-export default function watchTriggerData () {
-  tigerlily.on("*", function ({prop, path, oldValue, value}) {
+export function watchTriggerData () {
+  tigerlily.on("*", whenTriggerDataChanges);
+}
 
-    // TRIGGER REQUIREMENTS
-    let [modalMeetsRequirements, modalRequirements, modalActualValues] = modalMeetsTriggerRequirements();
-    let [bottomBarMeetsRequirements, bottomBarRequirements, bottomBarActualValues] = bottomBarMeetsTriggerRequirements();
+export function whenTriggerDataChanges () {
 
-    if (modalMeetsRequirements) {
-      temporaryGlobals.isModalOpenable = true;
-    } else {
-      temporaryGlobals.isModalOpenable = false;
-    }
+  // TRIGGER REQUIREMENTS
+  let [modalMeetsRequirements, modalRequirements, modalActualValues] = modalMeetsTriggerRequirements();
+  let [bottomBarMeetsRequirements, bottomBarRequirements, bottomBarActualValues] = bottomBarMeetsTriggerRequirements();
 
-    if (bottomBarMeetsRequirements) {
-      openBottomBar();
-    }
+  if (modalMeetsRequirements) {
+    temporaryGlobals.isModalOpenable = true;
+  } else {
+    temporaryGlobals.isModalOpenable = false;
+  }
 
-    if (temporaryGlobals.showDebugNotice) {
-      updateDebugNotice({modalRequirements, modalActualValues, modalMeetsRequirements, bottomBarRequirements, bottomBarActualValues, bottomBarMeetsRequirements});
-    }
+  if (bottomBarMeetsRequirements) {
+    openBottomBar();
+  }
 
-  });
+  if (temporaryGlobals.showDebugNotice) {
+    updateDebugNotice({modalRequirements, modalActualValues, modalMeetsRequirements, bottomBarRequirements, bottomBarActualValues, bottomBarMeetsRequirements});
+  }
+
 }

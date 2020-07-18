@@ -1,6 +1,7 @@
 import { enableBodyScroll } from 'body-scroll-lock';
 import temporaryGlobals from "../../temporary-globals/temporary-globals";
 import {persistentGlobals} from "../../persistent-globals/persistent-globals";
+import {whenTriggerDataChanges} from "../../trigger-popups/watch-trigger-data";
 
 export default function closeModal() {
   // store date it was clsoed
@@ -27,4 +28,8 @@ export default function closeModal() {
   }
 
   enableBodyScroll(temporaryGlobals.MODAL_ELEM);
+
+  temporaryGlobals.isModalOpen = false;
+  // manually recompute `isModalOpenable` because temporary globals don't trigger this automatically
+  whenTriggerDataChanges();
 }
