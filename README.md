@@ -1,5 +1,4 @@
-# Polite Pop
-## A Polite Email Signup Popup
+# Polite Email Popup
 
 A customizeable and accessible email sign up form that pops up when it's polite to do so.
 
