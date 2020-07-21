@@ -11,7 +11,7 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
     BOTTOM_BAR_FORM_INPUT_ELEM_SELECTOR: ".email-signup-form-input",
     BOTTOM_BAR_FORM_ELEM_SELECTOR: "form.bottom-bar__content",
     BOTTOM_BAR_CLOSE_BUTTON_ELEM_SELECTOR: ".bottom-bar__close",
-    DEBUG_ELEM: ".polite-pop__debug-notice",
+    DEBUG_ELEM: ".polite-email-popup__debug-notice",
     DEBUG_ELEM_RESET_SELECTOR: ".debug-email-forms__reset",
     DEBUG_ELEM_BYPASS_SELECTOR: ".debug-email-forms__bypass"
   };

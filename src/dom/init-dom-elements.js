@@ -6,7 +6,7 @@ import initElemGlobals from "./init-elem-globals";
 
 export default function initDomElements () {
   if (temporaryGlobals.showDebugNotice) {
-    addHtmlToPage("<div class='polite-pop__debug-notice'></div>");
+    addHtmlToPage("<div class='polite-email-popup__debug-notice'></div>");
   }
 
   // Add modal to page
