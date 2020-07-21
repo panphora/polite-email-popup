@@ -1,4 +1,4 @@
-import PoliteEmailPopup from "../../dist/polite-email-popup.modern.js";
+import PoliteEmailPopup from "../../dist/polite-pop.modern.js";
 
 // PoliteEmailForms.contentWebsite();
 // PoliteEmailForms.marketingWebsite();

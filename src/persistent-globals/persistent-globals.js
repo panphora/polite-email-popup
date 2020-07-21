@@ -3,7 +3,7 @@ import tigerlily from "tigerlily";
 let persistentGlobals;
 
 if (!persistentGlobals) {
-  persistentGlobals = tigerlily('polite-email-popup');
+  persistentGlobals = tigerlily('polite-pop');
 }
 
 window.persistentGlobals = persistentGlobals; // todo remove
