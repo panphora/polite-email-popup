@@ -22,7 +22,7 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
     showDebugNotice: false,
     websiteType: "content", // "content" or "marketing"
     beSlightlyMoreAggressive: false,
-    onSubmit: () => {console.log("Event: Email form submitted")},
+    onSubmit: () => {},
     imageSrc: "",
     headingText: "Sign up for updates",
     descriptionText: "Get cutting edge articles and insights into our process",
