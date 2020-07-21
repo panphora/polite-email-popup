@@ -1,17 +1,18 @@
-# A Polite Exit Intent Email Sign Up Modal
+# Polite Pop
+## A Polite Email Signup Popup
 
-A customizeable and accessible email sign up form that pops up as a modal and along a bottom bar.
+A customizeable and accessible email sign up form that pops up when it's polite to do so.
 
 ### Reason
 
-Businesses need to make money and grow their audience, but they don't have to be rude about it.
+You want to grow your audience, but not be rude about it.
 
-This email sign up form plugin was invented for businesses who want to collect as many emails as possible, while also being polite about it. 
+This plugin was made for businesses and individuals who want to collect as many emails as possible, while also being polite. It makes sure visitors are engaged with your content *before* asking for their emails.
 
 ### Features
 
-* This plugin will trigger
-  * An email sign up form inside a modal when the user shows intent to leave your page. By default, this is disabled on mobile.
+* This plugin will trigger:
+  * An email sign up form inside a modal when the user shows intent to leave your page. This is disabled on mobile.
   * An email sign up form along the bottom of your page after a user has scrolled down at least 40% of your page and been on the page for 8 seconds or longer. By default, this is enabled on both desktop and mobile.
 * The modal is accessible
   * Toggle the `aria-hidden` attribute on modal
