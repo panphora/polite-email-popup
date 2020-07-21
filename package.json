@@ -3,9 +3,9 @@
   "version": "0.5.0",
   "description": "A polite email popup",
   "source": "src/index.js",
-  "main": "dist/polite-email-popup.js",
-  "module": "dist/polite-email-popup.module.js",
-  "unpkg": "dist/polite-email-popup.umd.js",
+  "main": "dist/polite-pop.js",
+  "module": "dist/polite-pop.module.js",
+  "unpkg": "dist/polite-pop.umd.js",
   "scripts": {
     "http-server": "http-server -c-1",
     "microbundle-watch": "microbundle watch",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panphora/polite-email-popup.git"
+    "url": "git+https://github.com/panphora/polite-pop.git"
   },
   "keywords": [
     "polite",
@@ -29,9 +29,9 @@
   "author": "panphora",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/panphora/polite-email-popup/issues"
+    "url": "https://github.com/panphora/polite-pop/issues"
   },
-  "homepage": "https://github.com/panphora/polite-email-popup#readme",
+  "homepage": "https://github.com/panphora/polite-pop#readme",
   "devDependencies": {
     "body-scroll-lock": "^3.0.2",
     "esbuild": "^0.4.3",
