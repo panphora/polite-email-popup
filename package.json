@@ -1,5 +1,5 @@
 {
-  "name": "polite-email-popup",
+  "name": "polite-pop",
   "version": "0.5.0",
   "description": "A polite email popup",
   "source": "src/index.js",
