@@ -28,6 +28,7 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
     descriptionText: "Get cutting edge articles and insights into our process",
     mainButtonText: "Sign up",
     closeButtonText: "Close",
+    mailchimpConfig: {},
 
     // SYSTEM GLOBALS
     SELECTORS: SELECTORS,

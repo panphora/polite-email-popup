@@ -24,12 +24,27 @@ function onKeyDown (event) {
 function onSubmit (event) {
   event.preventDefault();
 
+  closeBottomBar();
+
+  // SPAM PREVENTION
+  if (event.currentTarget.querySelector('.js-validate-not-robot').value !== '') {
+    return;
+  }
+
+  // MAILCHIMP integration
+  let {spamPreventionKey, formAction} = temporaryGlobals.mailchimpConfig;
+  if (spamPreventionKey && formAction) {
+    sendEmailToMailChimp({event, email, spamPreventionKey, formAction, userDefinedCallback});
+  } else {
+    userDefinedCallback({event});
+  }
+}
+
+function userDefinedCallback ({event}) {
   // trigger onSubmit callback and pass in the user's email
-  let emailInputElement = event.currentTarget.querySelector(temporaryGlobals.SELECTORS.MODAL_FORM_INPUT_ELEM_SELECTOR);
+  let emailInputElement = event.currentTarget.querySelector(temporaryGlobals.SELECTORS.BOTTOM_BAR_FORM_INPUT_ELEM_SELECTOR);
   let email = emailInputElement.value;
   temporaryGlobals.onSubmit({event, email});
-
-  closeModal();
 }
 
 function onClickModalBackdrop (event) {

@@ -13,12 +13,11 @@ function onSubmit (event) {
   closeBottomBar();
 
   // SPAM PREVENTION
-  if (e.currentTarget.querySelector('.js-validate-not-robot').value !== '') {
+  if (event.currentTarget.querySelector('.js-validate-not-robot').value !== '') {
     return;
   }
 
   // MAILCHIMP integration
-  temporaryGlobals.mailchimpConfig = temporaryGlobals.mailchimpConfig || {};
   let {spamPreventionKey, formAction} = temporaryGlobals.mailchimpConfig;
   if (spamPreventionKey && formAction) {
     sendEmailToMailChimp({event, email, spamPreventionKey, formAction, userDefinedCallback});
