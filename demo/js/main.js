@@ -18,6 +18,7 @@ import PoliteEmailPopup from "../../dist/polite-email-popup.modern.js";
 // });
 
 PoliteEmailPopup.contentWebsite({
+  showDebugNotice: true, // remove in production
   imageSrc: "https://websharebox.s3.amazonaws.com/placeholder-logo.png",
   headingText: "Sign up for our newsletter",
   descriptionText: "Follow us to receive valuable tips and insider knowledge.",
