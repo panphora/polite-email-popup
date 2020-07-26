@@ -17,20 +17,16 @@ function onSubmit (event) {
     return;
   }
 
+  let emailInputElement = event.currentTarget.querySelector(temporaryGlobals.SELECTORS.BOTTOM_BAR_FORM_INPUT_ELEM_SELECTOR);
+  let email = emailInputElement.value;
+
   // MAILCHIMP integration
   let {spamPreventionKey, formAction} = temporaryGlobals.mailchimpConfig;
   if (spamPreventionKey && formAction) {
-    sendEmailToMailChimp({event, email, spamPreventionKey, formAction, userDefinedCallback});
+    sendEmailToMailChimp({event, email, spamPreventionKey, formAction});
   } else {
-    userDefinedCallback({event});
+    temporaryGlobals.onSubmit({event, email});
   }
-}
-
-function userDefinedCallback ({event}) {
-  // trigger onSubmit callback and pass in the user's email
-  let emailInputElement = event.currentTarget.querySelector(temporaryGlobals.SELECTORS.BOTTOM_BAR_FORM_INPUT_ELEM_SELECTOR);
-  let email = emailInputElement.value;
-  temporaryGlobals.onSubmit({event, email});
 }
 
 

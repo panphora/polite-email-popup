@@ -1,3 +1,5 @@
+import temporaryGlobals from "../temporary-globals/temporary-globals";
+
 export function sendEmailToMailChimp ({event, email, spamPreventionKey, formAction, userDefinedCallback}) {
   // Get url for mailchimp
   let url = (formAction || "").replace('/post?', '/post-json?');
@@ -27,9 +29,9 @@ export function sendEmailToMailChimp ({event, email, spamPreventionKey, formActi
 
     // Display response message
     if (res.result === "success") {
-      userDefinedCallback({event, email, success: true});
+      temporaryGlobals.onSubmit({event, email, success: true});
     } else {
-      userDefinedCallback({event, email, success: false});
+      temporaryGlobals.onSubmit({event, email, success: false});
     }
 
   };

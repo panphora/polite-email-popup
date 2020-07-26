@@ -4,7 +4,9 @@ export default function getBottomBarTemplateString ({headingText, mainButtonText
     <label class="bottom-bar__label">
       <span class="bottom-bar__label-text">${headingText}</span>
       <input class="bottom-bar__input email-signup-form-input" type="email" name="EMAIL" value="" placeholder="Your email address" required>
-      <input class="js-validate-not-robot" type="text">
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input class="js-validate-not-robot" type="text" tabindex="-1" value="">
+      </div>
     </label>
     <button class="bottom-bar__sign-up" type="submit">${mainButtonText}</button>
   </form>
