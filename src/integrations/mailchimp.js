@@ -1,4 +1,4 @@
-export function sendEmailToMailChimp ({event, email, spamPreventionKey, formAction}) {
+export function sendEmailToMailChimp ({event, email, spamPreventionKey, formAction, userDefinedCallback}) {
   // Get url for mailchimp
   let url = (formAction || "").replace('/post?', '/post-json?');
 
@@ -27,9 +27,9 @@ export function sendEmailToMailChimp ({event, email, spamPreventionKey, formActi
 
     // Display response message
     if (res.result === "success") {
-      console.log("SUCCESS", res);
+      userDefinedCallback({event, email, success: true});
     } else {
-      console.log("ERROR", res);
+      userDefinedCallback({event, email, success: false});
     }
 
   };
