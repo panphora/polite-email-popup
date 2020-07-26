@@ -2,6 +2,7 @@ import temporaryGlobals from "../temporary-globals/temporary-globals";
 import {sendEmailToMailChimp} from "../integrations/mailchimp";
 import closeBottomBar from "../bottom-bar/bottom-bar-actions/close-bottom-bar";
 import closeModal from "../modal/modal-actions/close-modal";
+import {showSuccessMessage, showErrorMessage} from "../helpers/notifications";
 
 export function onSubmit (event) {
   event.preventDefault();
@@ -25,6 +26,9 @@ export function onSubmit (event) {
   if (spamPreventionKey && formAction) {
     sendEmailToMailChimp({event, email, spamPreventionKey, formAction});
   } else {
+    if (temporaryGlobals.showFormSubmissionNotices) {
+      showSuccessMessage();
+    }
     temporaryGlobals.onSubmit({event, email});
   }
 }

@@ -28,6 +28,9 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
     descriptionText: "Get cutting edge articles and insights into our process",
     mainButtonText: "Sign up",
     closeButtonText: "Close",
+    showFormSubmissionNotices: true,
+    successMessage: "Thank you signing up!",
+    failureMessage: "Sorry, sign up failed...",
     mailchimpConfig: {},
 
     // SYSTEM GLOBALS
