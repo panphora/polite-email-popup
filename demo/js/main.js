@@ -12,6 +12,10 @@ import PoliteEmailPopup from "../../dist/polite-email-popup.modern.js";
 //   successMessage: "Thank you signing up!",
 //   mainButtonText: "Sign up",
 //   closeButtonText: "Close",
+//   mailchimpConfig: {
+//     formAction: undefined, // Your Mailchimp form's action
+//     spamPreventionKey: undefined // Your Mailchimp form's spam prevention key
+//   },
 //   onSubmit: function ({event, email}) {
 //     console.log("FORM SUBMITTED", event, email);
 //   }
