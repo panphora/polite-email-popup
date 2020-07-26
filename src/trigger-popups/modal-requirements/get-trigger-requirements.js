@@ -8,8 +8,8 @@ const minimumsLookup = {
       "aggressive": 0
     },
     "marketing": {
-      "notAggressive": 3,
-      "aggressive": 2
+      "notAggressive": 2,
+      "aggressive": 1
     }
   },
   "activeTimeOnPage": {
@@ -38,8 +38,8 @@ const minimumsLookup = {
       "aggressive": 25
     },
     "marketing": {
-      "notAggressive": 0,
-      "aggressive": 0
+      "notAggressive": 35,
+      "aggressive": 25
     }
   }
 };
