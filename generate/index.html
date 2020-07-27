@@ -11,20 +11,26 @@
     <center><h1>Generate a Polite Email Popup<br>for Your Website!</h1></center>
     <div class="general-config">
       <h2>Configure your popups:</h2>
-      <label>Logo image url</label>
-      <input class="general-config__image-src js-popup-config-input" type="text" value="https://websharebox.s3.amazonaws.com/placeholder-logo.png">
-      <label>Heading text</label>
-      <input class="general-config__heading-text js-popup-config-input" type="text" value="Sign up for our newsletter">
-      <label>Description text</label>
-      <input class="general-config__description-text js-popup-config-input" type="text" value="Follow us to receive valuable tips and insider knowledge.">
-      <label>Success message</label>
-      <input class="general-config__success-message js-popup-config-input" type="text" value="Thank you for signing up!">
+      <label for="image-src" class="block">Logo image url</label>
+      <input id="image-src" class="general-config__image-src js-popup-config-input" type="text" value="https://websharebox.s3.amazonaws.com/placeholder-logo.png">
+      <label for="heading-text" class="block">Heading text</label>
+      <input id="heading-text" class="general-config__heading-text js-popup-config-input" type="text" value="Sign up for our newsletter">
+      <label for="description-text" class="block">Description text</label>
+      <input id="description-text" class="general-config__description-text js-popup-config-input" type="text" value="Follow us to receive valuable tips and insider knowledge.">
+      <label for="main-button-text" class="block">Main button text</label>
+      <input id="main-button-text" class="general-config__main-button-text js-popup-config-input" type="text" value="Sign up">
+      <label for="success-message" class="block">Success message</label>
+      <input id="success-message" class="general-config__success-message js-popup-config-input" type="text" value="Thank you for signing up!">
+      <label for="failure-message" class="block">Failure message</label>
+      <input id="failure-message" class="general-config__failure-message js-popup-config-input" type="text" value="Sorry, sign up failed...">
+      <input id="be-slightly-more-aggressive" type="checkbox" checked="">
+      <label for="be-slightly-more-aggressive">Make popups trigger slightly more aggressively</label>
     </div>
     <details class="mailchimp-config">
       <summary>Click to add Mailchimp configuration...</summary>
-      <label>Paste your Mailchimp embed form code here:</label>
+      <label for="config-code">Paste your Mailchimp embed form code here:</label>
       <div class="mailchimp-config__hidden-form"></div>
-      <textarea class="mailchimp-config__code js-popup-config-input"></textarea>
+      <textarea id="config-code" class="mailchimp-config__code js-popup-config-input"></textarea>
     </details>
     <button>Generate Code!</button>
   </div>
