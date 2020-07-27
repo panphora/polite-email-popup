@@ -10,9 +10,9 @@
     </defs>
     <g id="polite-pitch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect fill="#FFF4E6" x="0" y="0" width="1080" height="766"></rect>
-        <text id="Don’t-be-awkward-and" font-family="Lato-Bold, Lato" font-size="38" font-weight="bold">
-            <tspan x="67" y="103" fill="#212529">Don’t be awkward and ask for someone’s email before </tspan>
-            <tspan x="67" y="149" fill="#212529">they have a chance to get to know you.</tspan>
+        <text id="You-don’t-want-to-be" font-family="Lato-Bold, Lato" font-size="38" font-weight="bold">
+            <tspan x="67" y="103" fill="#212529">You don’t want to be awkward and ask for someone’s </tspan>
+            <tspan x="67" y="149" fill="#212529">email before they have a chance to get to know you.</tspan>
             <tspan x="67" y="195" fill="#212529"></tspan>
             <tspan x="67" y="241" fill="#212529">Wouldn’t it be great if you could tell if a visitor was </tspan>
             <tspan x="67" y="287" fill="#212529">engaged with your content — and only then ask them </tspan>
