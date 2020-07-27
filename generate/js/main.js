@@ -8,6 +8,7 @@ document.addEventListener("click", function (e) {
   if (event.target.closest(".generate-code-button")) {
     let { formAction, spamPreventionKey } = parseMailchimpConfig();
 
+    let typeOfWebsite = document.querySelector('input[name="type-of-website"]:checked').value;
     let imageSrc = document.querySelector(".general-config__image-src").value;
     let headingText = document.querySelector(".general-config__heading-text").value;
     let descriptionText = document.querySelector(".general-config__description-text").value;
@@ -17,6 +18,7 @@ document.addEventListener("click", function (e) {
     let beSlightlyMoreAggressive = document.querySelector("#be-slightly-more-aggressive").checked;
 
     outputConfigCodeElem.value = createOutputConfig({
+      typeOfWebsite,
       imageSrc,
       headingText,
       descriptionText,
@@ -51,9 +53,7 @@ function parseMailchimpConfig() {
       spamPreventionKey: spamPreventionInput.name
     };
   } else {
-    alert(
-      "Your Mailchimp form is missing either a <form> or a spam prevention input"
-    );
+    alert("Your Mailchimp form is missing either a <form> or a spam prevention input");
     return {};
   }
 
@@ -61,6 +61,7 @@ function parseMailchimpConfig() {
 }
 
 function createOutputConfig({
+  typeOfWebsite = "",
   imageSrc = "",
   headingText = "",
   descriptionText = "",
@@ -73,24 +74,24 @@ function createOutputConfig({
 } = {}) {
   return `<script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.7.0/dist/polite-email-popup.umd.js"><\/script>
 <script>
-  PoliteEmailPopup.contentWebsite({
-    beSlightlyMoreAggressive: true,
-    imageSrc: "${imageSrc}",
-    headingText: "${headingText}",
-    descriptionText: "${descriptionText}",
-    mainButtonText: "${mainButtonText}",
-    successMessage: "${successMessage}",
-    failureMessage: "${failureMessage}",
-    mailchimpConfig: {
+  PoliteEmailPopup.${typeOfWebsite === "content" ? "contentWebsite" : "marketingWebsite"}({
+    ${beSlightlyMoreAggressive ? "beSlightlyMoreAggressive: true," : ""}
+    ${imageSrc ? `imageSrc: "${imageSrc}",` : ""}
+    ${headingText ? `headingText: "${headingText}",` : ""}
+    ${descriptionText ? `descriptionText: "${descriptionText}",` : ""}
+    ${mainButtonText ? `mainButtonText: "${mainButtonText}",` : ""}
+    ${successMessage ? `successMessage: "${successMessage}",` : ""}
+    ${failureMessage ? `failureMessage: "${failureMessage}",` : ""}
+    ${(formAction && spamPreventionKey) ? `mailchimpConfig: {
       formAction: "${formAction}",
       spamPreventionKey: "${spamPreventionKey}"
-    },
+    },` : ""}
     onSubmit: function ({event, email, success}) {
       // Add any custom code here, like a Google Analytics event
       // that you want to trigger every time a user submits their email
     }
   });
-<\/script>`;
+<\/script>`.replace(/\n\s*\n/g, "\n");
 }
 
 

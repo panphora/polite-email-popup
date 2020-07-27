@@ -3,9 +3,9 @@ export default function getModalTemplateString ({imageSrc, headingText, descript
 <div class="email-modal" role="dialog" aria-labelledby="email-modal-title" aria-describedby="email-modal-description" aria-hidden="true">
   <form class="email-modal__content" method="POST" action="/">
     <div class="email-modal__top">
-      <div class="email-modal__top-media">
+      ${imageSrc ? `<div class="email-modal__top-media">
         <img class="email-modal__top-image" src="${imageSrc}">
-      </div>
+      </div>` : ""}
       <div class="email-modal__top-content">
         <h2 class="email-modal__title" id="email-modal-title">${headingText}</h2>
         <p class="email-modal__description" id="email-modal-description">${descriptionText}</p>
