@@ -43,13 +43,17 @@
       <label class="block">Trigger popups sooner?</label>
       <input id="be-slightly-more-aggressive" type="checkbox">
       <label for="be-slightly-more-aggressive">Make popups trigger slightly more aggressively</label>
-      <label class="block">Show debug notice? <span class="light">(only enable this for testing, not permanently)</span></label>
-      <input id="show-debug-notice" type="checkbox">
-      <label for="show-debug-notice">Show a notice where you can keep track of Polite Email Popup's parameters</label>
+      <details>
+        <summary>Show debug notice? <span class="light">(only enable this for testing, not permanently)</span></summary>
+        <div style="margin-top: 1rem;">
+          <input id="show-debug-notice" type="checkbox">
+          <label for="show-debug-notice">Show a notice where you can keep track of Polite Email Popup's parameters</label>
+        </div>
+      </details>
     </div>
     <details class="mailchimp-config">
       <summary>Add Mailchimp configuration</summary>
-      <div style="margin-top: 2rem; text-align: right;">
+      <div style="margin-top: 1.5rem; text-align: right;">
         <a style="display: inline-block; border: 1px solid #41adff; padding: 5px 10px;" href="" target="_blank">▶️ Watch a 2 min tutorial on how to add Mailchimp</a>
       </div>
       <label class="block" for="config-code">Paste your Mailchimp embed form code here:</label>
