@@ -4,29 +4,29 @@ let mailchimpHiddenFormElem = document.querySelector(
 );
 let outputConfigCodeElem = document.querySelector(".output-config__code");
 
-document.addEventListener("input", function (e) {
-  if (event.target.closest(".js-popup-config-input")) {
+document.addEventListener("click", function (e) {
+  if (event.target.closest(".generate-code-button")) {
     let { formAction, spamPreventionKey } = parseMailchimpConfig();
+
     let imageSrc = document.querySelector(".general-config__image-src").value;
-    let headingText = document.querySelector(".general-config__heading-text")
-      .value;
-    let descriptionText = document.querySelector(
-      ".general-config__description-text"
-    ).value;
-    let successMessage = document.querySelector(
-      ".general-config__success-message"
-    ).value;
+    let headingText = document.querySelector(".general-config__heading-text").value;
+    let descriptionText = document.querySelector(".general-config__description-text").value;
+    let mainButtonText = document.querySelector(".general-config__main-button-text").value;
+    let successMessage = document.querySelector(".general-config__success-message").value;
+    let failureMessage = document.querySelector(".general-config__failure-message").value;
+    let beSlightlyMoreAggressive = document.querySelector("#be-slightly-more-aggressive").checked;
 
     outputConfigCodeElem.value = createOutputConfig({
       imageSrc,
       headingText,
       descriptionText,
+      mainButtonText,
       successMessage,
+      failureMessage,
+      beSlightlyMoreAggressive,
       formAction,
       spamPreventionKey
     });
-
-    mailchimpHiddenFormElem.innerHTML = "";
   }
 });
 
@@ -56,17 +56,22 @@ function parseMailchimpConfig() {
     );
     return {};
   }
+
+  mailchimpHiddenFormElem.innerHTML = "";
 }
 
 function createOutputConfig({
   imageSrc = "",
   headingText = "",
   descriptionText = "",
+  mainButtonText = "",
   successMessage = "",
+  failureMessage = "",
+  beSlightlyMoreAggressive = false,
   formAction = "",
   spamPreventionKey = ""
 } = {}) {
-  return `<script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.6.0/dist/polite-email-popup.umd.js"><\/script>
+  return `<script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.7.0/dist/polite-email-popup.umd.js"><\/script>
 <script>
   PoliteEmailPopup.contentWebsite({
     imageSrc: "${imageSrc}",
