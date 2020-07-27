@@ -18,8 +18,10 @@ document.addEventListener("click", function (e) {
     let successMessage = document.querySelector(".general-config__success-message").value;
     let failureMessage = document.querySelector(".general-config__failure-message").value;
     let beSlightlyMoreAggressive = document.querySelector("#be-slightly-more-aggressive").checked;
+    let showDebugNotice = document.querySelector("#show-debug-notice").checked;
 
     outputConfigCodeElem.value = createOutputConfig({
+      showDebugNotice,
       typeOfWebsite,
       imageSrc,
       headingText,
@@ -70,13 +72,15 @@ function createOutputConfig({
   mainButtonText = "",
   successMessage = "",
   failureMessage = "",
+  showDebugNotice = false,
   beSlightlyMoreAggressive = false,
   formAction = "",
   spamPreventionKey = ""
 } = {}) {
-  return `<script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.7.0/dist/polite-email-popup.umd.js"><\/script>
+  return `<script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.7.1/dist/polite-email-popup.umd.js"><\/script>
 <script>
   PoliteEmailPopup.${typeOfWebsite === "content" ? "contentWebsite" : "marketingWebsite"}({
+    ${showDebugNotice ? "showDebugNotice: true," : ""}
     ${beSlightlyMoreAggressive ? "beSlightlyMoreAggressive: true," : ""}
     ${imageSrc ? `imageSrc: "${imageSrc}",` : ""}
     ${headingText ? `headingText: "${headingText}",` : ""}
