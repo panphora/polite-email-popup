@@ -5,6 +5,8 @@
   <title>Generate a Polite Email Popup for Your Website!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <div class="config">
@@ -56,8 +58,10 @@
   <div class="output-config">
     <h2>Ouput code:</h2>
     <label class="block">Paste the following code into your website to enable the Polite Email Popup plugin!</label>
+    <div style="text-align: right; margin-bottom: .25rem; margin-top: 1rem;">
+      <button class="copy-code-button inline-block" data-clipboard-target=".output-config__code">Copy code to clipboard</button>
+    </div>
     <textarea class="output-config__code"></textarea>
   </div>
-  <script src="js/main.js"></script>
 </body>
 </html>

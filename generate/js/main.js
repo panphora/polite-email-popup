@@ -1,3 +1,5 @@
+new ClipboardJS('.copy-code-button')
+
 let mailchimpCodeElem = document.querySelector(".mailchimp-config__code");
 let mailchimpHiddenFormElem = document.querySelector(
   ".mailchimp-config__hidden-form"

@@ -32,6 +32,10 @@ details summary {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 label {
   margin-top: 1.5rem;
   margin-bottom: .75rem;
@@ -43,8 +47,16 @@ label {
   opacity: .5;
 }
 
+.copy-code-button {
+  background-color: #5f3dc4;
+}
+
+.copy-code-button:hover {
+  background-color: #7048e8;
+}
+
 .mailchimp-config__hidden-form {
-  /* display: none;*/
+  display: none;
 }
 
 .mailchimp-config__code, .output-config__code {
