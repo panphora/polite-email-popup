@@ -11,24 +11,36 @@
     <center><h1>Generate a Polite Email Popup<br>for Your Website!</h1></center>
     <div class="general-config">
       <h2>Configure your popups:</h2>
-      <label for="image-src" class="block">Logo image url</label>
+      <label for="image-src" class="block">Logo image URL</label>
       <input id="image-src" class="general-config__image-src js-popup-config-input" type="text" value="https://websharebox.s3.amazonaws.com/placeholder-logo.png">
       <label for="heading-text" class="block">Heading text</label>
       <input id="heading-text" class="general-config__heading-text js-popup-config-input" type="text" value="Sign up for our newsletter">
       <label for="description-text" class="block">Description text</label>
-      <input id="description-text" class="general-config__description-text js-popup-config-input" type="text" value="Follow us to receive valuable tips and insider knowledge.">
+      <input id="description-text" class="general-config__description-text js-popup-config-input" type="text" value="Follow along to receive valuable tips and insider knowledge">
       <label for="main-button-text" class="block">Main button text</label>
       <input id="main-button-text" class="general-config__main-button-text js-popup-config-input" type="text" value="Sign up">
       <label for="success-message" class="block">Success message</label>
       <input id="success-message" class="general-config__success-message js-popup-config-input" type="text" value="Thank you for signing up!">
       <label for="failure-message" class="block">Failure message</label>
       <input id="failure-message" class="general-config__failure-message js-popup-config-input" type="text" value="Sorry, sign up failed...">
-      <input id="be-slightly-more-aggressive" type="checkbox" checked="">
+      <div style="margin-bottom: 1rem;">
+        <label class="block">Type of website</label>
+        <div>
+          <input id="content-website" type="radio" name="type-of-website" value="content" checked="">
+          <label for="content-website">Content website <span class="light">(a long piece of content, like a blog post)</span></label>
+        </div>
+        <div>
+          <input id="marketing-website" type="radio" name="type-of-website" value="marketing">
+          <label for="marketing-website">Marketing website <span class="light">(a multi-page website that people browse)</span></label>
+        </div>
+      </div>
+      <label class="block">Trigger popups sooner?</label>
+      <input id="be-slightly-more-aggressive" type="checkbox">
       <label for="be-slightly-more-aggressive">Make popups trigger slightly more aggressively</label>
     </div>
     <details class="mailchimp-config">
-      <summary>Click to add Mailchimp configuration...</summary>
-      <label for="config-code">Paste your Mailchimp embed form code here:</label>
+      <summary>Add Mailchimp configuration</summary>
+      <label class="block" for="config-code">Paste your Mailchimp embed form code here:</label>
       <div class="mailchimp-config__hidden-form"></div>
       <textarea id="config-code" class="mailchimp-config__code js-popup-config-input"></textarea>
     </details>

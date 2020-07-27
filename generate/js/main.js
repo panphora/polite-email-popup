@@ -74,14 +74,23 @@ function createOutputConfig({
   return `<script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.7.0/dist/polite-email-popup.umd.js"><\/script>
 <script>
   PoliteEmailPopup.contentWebsite({
+    beSlightlyMoreAggressive: true,
     imageSrc: "${imageSrc}",
     headingText: "${headingText}",
     descriptionText: "${descriptionText}",
+    mainButtonText: "${mainButtonText}",
     successMessage: "${successMessage}",
+    failureMessage: "${failureMessage}",
     mailchimpConfig: {
       formAction: "${formAction}",
       spamPreventionKey: "${spamPreventionKey}"
+    },
+    onSubmit: function ({event, email, success}) {
+      // Add any custom code here, like a Google Analytics event
+      // that you want to trigger every time a user submits their email
     }
   });
 <\/script>`;
 }
+
+

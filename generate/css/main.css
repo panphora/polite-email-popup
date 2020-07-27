@@ -7,10 +7,14 @@ h1 {
   margin-bottom: 4rem;
 }
 
-.general-config input[type="text"] {
+input[type="text"] {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
+}
+
+input[type="radio"], input[type="radio"] + label, input[type="checkbox"], input[type="checkbox"] + label {
+  cursor: pointer;
 }
 
 details {
@@ -29,8 +33,14 @@ details summary {
 }
 
 label {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 1.5rem;
+  margin-bottom: .75rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.light {
+  opacity: .5;
 }
 
 .mailchimp-config__hidden-form {
@@ -41,3 +51,31 @@ label {
   width: 100%;
   min-height: 16em;
 }
+
+.generate-code-button {
+  font-size: 21px;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  background-color: #2f9e44;
+}
+
+.generate-code-button:hover {
+  background-color: #257735;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
