@@ -7,28 +7,29 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <h1>Generate a Polite Email Popup for Your Website!</h1>
-  <div class="general-config">
-    <h4>Configure your popups:</h4>
-    <label>Logo image url</label>
-    <input class="general-config__image-src js-popup-config-input" type="text" placeholder="An image url" value="https://websharebox.s3.amazonaws.com/placeholder-logo.png">
-    <label>Heading text</label>
-    <input class="general-config__heading-text js-popup-config-input" type="text" placeholder="Heading text" value="Sign up for our newsletter">
-    <label>Description text</label>
-    <input class="general-config__description-text js-popup-config-input" type="text" placeholder="Description text" value="Follow us to receive valuable tips and insider knowledge.">
-    <label>Success message</label>
-    <input class="general-config__success-message js-popup-config-input" type="text" placeholder="Success message" value="Thank you for signing up!">
+  <div class="config">
+    <center><h1>Generate a Polite Email Popup<br>for Your Website!</h1></center>
+    <div class="general-config">
+      <h2>Configure your popups:</h2>
+      <label>Logo image url</label>
+      <input class="general-config__image-src js-popup-config-input" type="text" value="https://websharebox.s3.amazonaws.com/placeholder-logo.png">
+      <label>Heading text</label>
+      <input class="general-config__heading-text js-popup-config-input" type="text" value="Sign up for our newsletter">
+      <label>Description text</label>
+      <input class="general-config__description-text js-popup-config-input" type="text" value="Follow us to receive valuable tips and insider knowledge.">
+      <label>Success message</label>
+      <input class="general-config__success-message js-popup-config-input" type="text" value="Thank you for signing up!">
+    </div>
+    <details class="mailchimp-config">
+      <summary>Click to add Mailchimp configuration...</summary>
+      <label>Paste your Mailchimp embed form code here:</label>
+      <div class="mailchimp-config__hidden-form"></div>
+      <textarea class="mailchimp-config__code js-popup-config-input"></textarea>
+    </details>
+    <button>Generate Code!</button>
   </div>
-
-  <div class="mailchimp-config">
-    <h4>Send emails directly to Mailchimp:</h4>
-    <div>Paste your Mailchimp embed form code here:</div>
-    <div class="mailchimp-config__hidden-form"></div>
-    <textarea class="mailchimp-config__code js-popup-config-input" placeholder="Paste Mailchimp code here"></textarea>
-  </div>
-
   <div class="output-config">
-    <h4>Ouput code:</h4>
+    <h2>Ouput code:</h2>
     <div>Paste this into your website</div>
     <textarea class="output-config__code"></textarea>
   </div>
