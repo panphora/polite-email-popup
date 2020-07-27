@@ -91,7 +91,7 @@ function createOutputConfig({
       // that you want to trigger every time a user submits their email
     }
   });
-<\/script>`.replace(/\n\s*\n/g, "\n");
+<\/script>`.replace(/\n\s*\n/g, "\n"); // remove empty lines
 }
 
 

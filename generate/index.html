@@ -9,9 +9,12 @@
 <body>
   <div class="config">
     <center><h1>Generate a Polite Email Popup<br>for Your Website!</h1></center>
+    <div style="text-align: right;">
+      <a style="display: inline-block; border: 1px solid #41adff; padding: 5px 10px;" href="" target="_blank">▶️ Watch a 2 min tutorial</a>
+    </div>
     <div class="general-config">
       <h2>Configure your popups:</h2>
-      <div>If you leave any of these blank, they'll be set to a safe default.</div>
+      <div class="light"><b>If you leave any of these fields blank, they'll be set to safe defaults by the Polite Email Popup library.</b></div>
       <label for="image-src" class="block">Logo image URL</label>
       <input id="image-src" class="general-config__image-src js-popup-config-input" type="text" value="https://websharebox.s3.amazonaws.com/placeholder-logo.png">
       <label for="heading-text" class="block">Heading text</label>
@@ -41,6 +44,9 @@
     </div>
     <details class="mailchimp-config">
       <summary>Add Mailchimp configuration</summary>
+      <div style="margin-top: 2rem; text-align: right;">
+        <a style="display: inline-block; border: 1px solid #41adff; padding: 5px 10px;" href="" target="_blank">▶️ Watch a 2 min tutorial on how to add Mailchimp</a>
+      </div>
       <label class="block" for="config-code">Paste your Mailchimp embed form code here:</label>
       <div class="mailchimp-config__hidden-form"></div>
       <textarea id="config-code" class="mailchimp-config__code js-popup-config-input"></textarea>
@@ -49,7 +55,7 @@
   </div>
   <div class="output-config">
     <h2>Ouput code:</h2>
-    <div>Paste this into your website</div>
+    <label class="block">Paste the following code into your website to enable the Polite Email Popup plugin!</label>
     <textarea class="output-config__code"></textarea>
   </div>
   <script src="js/main.js"></script>

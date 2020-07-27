@@ -49,7 +49,7 @@ label {
 
 .mailchimp-config__code, .output-config__code {
   width: 100%;
-  min-height: 16em;
+  min-height: 22em;
 }
 
 .generate-code-button {
