@@ -1,0 +1,19 @@
+.mailchimp-config, .output-config, .general-config {
+  margin: 1rem auto 1rem;
+  max-width: 600px;
+}
+
+.general-config input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.mailchimp-config__hidden-form {
+  /* display: none;*/
+}
+
+.mailchimp-config__code, .output-config__code {
+  width: 100%;
+  min-height: 16em;
+}
