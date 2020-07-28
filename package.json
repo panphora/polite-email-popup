@@ -38,11 +38,11 @@
     "esbuild": "^0.4.3",
     "http-server": "^0.12.3",
     "stormcloud": "^0.5.9",
-    "tigerlily": "^0.6.2"
+    "tigerlily": "^0.6.2",
+    "notyf": "^3.9.0"
   },
   "dependencies": {
     "concurrently": "^5.2.0",
-    "microbundle": "^0.12.2",
-    "notyf": "^3.9.0"
+    "microbundle": "^0.12.2"
   }
 }
