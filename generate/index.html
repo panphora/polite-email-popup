@@ -19,8 +19,8 @@
     </div>
     <div class="general-config">
       <h2>Configure your popups:</h2>
-      <div class="light"><b>If you leave any of these fields blank, they'll be set to safe defaults by the Polite Email Popup library.</b></div>
-      <label for="image-src" class="block">Logo image URL</label>
+      <div class="light" style="margin-bottom: 3rem;"><b>If you leave any of these fields blank, they'll be set to safe defaults by the Polite Email Popup library.</b></div>
+      <label for="image-src" class="block">Logo image URL <span class="label-note">(This URL can be relative to your website, like <code>/images/my-image.png</code>)</span></label>
       <input id="image-src" class="general-config__image-src js-popup-config-input" type="text" value="https://websharebox.s3.amazonaws.com/placeholder-logo.png">
       <label for="heading-text" class="block">Heading text</label>
       <input id="heading-text" class="general-config__heading-text js-popup-config-input" type="text" value="Sign up for our newsletter">
@@ -65,13 +65,17 @@
     </details>
     <button class="generate-code-button">Generate Code!</button>
   </div>
-  <div class="output-config">
+  <div class="output-config hide">
     <h2>Ouput code:</h2>
     <label class="block">Paste the following code into your website to enable the Polite Email Popup plugin!</label>
     <div style="text-align: right; margin-bottom: .25rem; margin-top: 1rem;">
       <button class="copy-code-button inline-block" data-clipboard-target=".output-config__code">Copy code to clipboard</button>
     </div>
     <textarea class="output-config__code"></textarea>
+    <div class="note">
+      <div class="note-heading">Note:</div>
+      <div>Although you can add this code anywhere on your site and it will work, it's recommended that you put it in the footer of your site, right before the closing <code>&lt;/body></code> tag.</div>
+    </div>
   </div>
 </body>
 </html>

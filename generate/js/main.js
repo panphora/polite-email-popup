@@ -4,6 +4,7 @@ let mailchimpCodeElem = document.querySelector(".mailchimp-config__code");
 let mailchimpHiddenFormElem = document.querySelector(
   ".mailchimp-config__hidden-form"
 );
+let outputConfigElem = document.querySelector(".output-config");
 let outputConfigCodeElem = document.querySelector(".output-config__code");
 
 document.addEventListener("click", function (e) {
@@ -33,6 +34,9 @@ document.addEventListener("click", function (e) {
       formAction,
       spamPreventionKey
     });
+
+    outputConfigElem.classList.remove("hide");
+    outputConfigElem.scrollIntoView({behavior: "smooth"});
   }
 });
 

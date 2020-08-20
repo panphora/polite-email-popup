@@ -1,11 +1,20 @@
+import domReady from "../dom/dom-ready";
 import { Notyf } from 'notyf';
-let notyf = new Notyf({
-  duration: 5000,
-  position: {
-    x: "center",
-    y: "top"
-  },
-  dismissible: true
+
+let notyf = {
+  success: () => {},
+  error: () => {}
+};
+
+domReady(() => {
+  let notyf = new Notyf({
+    duration: 5000,
+    position: {
+      x: "center",
+      y: "top"
+    },
+    dismissible: true
+  });
 });
 
 export function showSuccessMessage (msg) {

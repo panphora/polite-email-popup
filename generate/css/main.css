@@ -1,3 +1,11 @@
+body {
+  margin-bottom: 6rem;
+}
+
+.hide {
+  display: none;
+}
+
 .config {
   margin-bottom: 4rem;
 }
@@ -45,6 +53,26 @@ label {
 
 .light {
   opacity: .5;
+}
+
+.label-note {
+  color: #7d8389;
+  font-weight: normal;
+}
+
+code {
+  color: #dbdbdb;
+}
+
+.note {
+  padding: 8px 12px 9px;
+  background-color: rgba(255,255,255,.08);
+  color: #ebebeb;
+}
+
+.note-heading {
+  color: #ffe066;
+  font-weight: bold;
 }
 
 .copy-code-button {

@@ -19,8 +19,22 @@
       width: 100%;
     }
   </style>
-  <script type="module" src="/dist/polite-email-popup.modern.js?v=56789"></script>
-  <script type="module" src="/demo/js/main.js?v=56789"></script>
+  <script src="/dist/polite-email-popup.umd.js"></script>
+  <script>
+    PoliteEmailPopup.contentWebsite({
+      showDebugNotice: true,
+      imageSrc: "https://websharebox.s3.amazonaws.com/placeholder-logo.png",
+      headingText: "Sign up for our newsletter",
+      descriptionText: "Follow along to receive valuable tips and insider knowledge",
+      mainButtonText: "Sign up",
+      successMessage: "Thank you for signing up!",
+      failureMessage: "Sorry, sign up failed...",
+      onSubmit: function ({event, email, success}) {
+        // Add any custom code here, like a Google Analytics event
+        // that you want to trigger every time a user submits their email
+      }
+    });
+  </script>
 </head>
 <body>
   <div class="water">
