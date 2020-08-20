@@ -1,5 +1,5 @@
 import getTriggerRequirements from "./get-trigger-requirements";
-import {getDaysSinceModalClosed} from "../../helpers/helpers";
+import {getDaysSinceBottomBarClosed, getDaysSinceModalClosed} from "../../helpers/helpers";
 import temporaryGlobals from "../../temporary-globals/temporary-globals";
 
 export default function meetsTriggerRequirements () {
@@ -10,7 +10,13 @@ export default function meetsTriggerRequirements () {
     return actual[key] >= requirements[key];
   });
 
-  // must wait a few days before opening the modal again
+  // must wait a few days before opening either the modal or bottom bar again
+  let daysSinceBottomBarClosed = getDaysSinceBottomBarClosed();
+  if (daysSinceBottomBarClosed) {
+    meetsRequirements = meetsRequirements && daysSinceBottomBarClosed.days >= 2;
+  }
+
+  // must wait a few days before opening either the modal or bottom bar again
   let daysSinceModalClosed = getDaysSinceModalClosed();
   if (daysSinceModalClosed) {
     meetsRequirements = meetsRequirements && daysSinceModalClosed.days >= 2;

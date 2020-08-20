@@ -7,7 +7,7 @@ let notyf = {
 };
 
 domReady(() => {
-  let notyf = new Notyf({
+  notyf = new Notyf({
     duration: 5000,
     position: {
       x: "center",

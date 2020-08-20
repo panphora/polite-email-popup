@@ -50,14 +50,16 @@ export default function getDebugNoticeTemplateString ({modalRequirements, modalA
     <span class="debug-email-forms__stat-label">Modal was closed: </span>
     <span class="debug-email-forms__stat-value">${daysSinceModalClosed ? (daysSinceModalClosed.days + ` day${daysSinceModalClosed.days !== 1 ? "s" : ""} ago`) : "never"}</span>
     <ul class="debug-email-forms__stat-requirements">
-      <li class="debug-email-forms__stat-requirement">Requires: never or 2 days ago</li>
+      <li class="debug-email-forms__stat-requirement">Modal requires: never or 2 days ago</li>
+      <li class="debug-email-forms__stat-requirement">Bottom bar requires: never or 2 days ago</li>
     </ul>
   </div>
   <div class="debug-email-forms__stat">
     <span class="debug-email-forms__stat-label">Bottom bar was closed: </span>
     <span class="debug-email-forms__stat-value">${daysSinceBottomBarClosed ? (daysSinceBottomBarClosed.days + ` day${daysSinceBottomBarClosed.days !== 1 ? "s" : ""} ago`) : "never"}</span>
     <ul class="debug-email-forms__stat-requirements">
-      <li class="debug-email-forms__stat-requirement">Requires: never or 2 days ago</li>
+      <li class="debug-email-forms__stat-requirement">Modal requires: never or 2 days ago</li>
+      <li class="debug-email-forms__stat-requirement">Bottom bar requires: never or 2 days ago</li>
     </ul>
   </div>
   <div class="debug-email-forms__stat">

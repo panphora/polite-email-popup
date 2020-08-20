@@ -1,10 +1,22 @@
+/*
+
+  This file needs to be manually minified every time it's changed 
+  and added into the the /helpers/get-styles-string.js file
+
+  TODO add a simple build process for this
+
+*/
+
+
+
+
 /* 
   
   # Notif v3.9.0 
   
   Slightly modified:
-  -> `.notyf` font-size changed to 16px
-  -> `.notyf` font-family changed to system font stack
+  -> .notyf font-size changed to 16px
+  -> .notyf font-family changed to system font stack
 
 */
 
@@ -705,11 +717,12 @@
 
 .debug-email-forms .debug-email-forms__stat-requirements {
   margin: 6px 0;
-  padding-left: 32px;
+  padding-left: 20px;
 }
 
 .debug-email-forms .debug-email-forms__stat-requirement {
   color: #868e96;
+  font-size: 14px;
 }
 
 .debug-email-forms .debug-email-forms__stat-value--success {

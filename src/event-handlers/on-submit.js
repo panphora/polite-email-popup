@@ -27,7 +27,7 @@ export function onSubmit (event) {
     sendEmailToMailChimp({event, email, spamPreventionKey, formAction});
   } else {
     if (temporaryGlobals.showFormSubmissionNotices) {
-      showSuccessMessage();
+      showSuccessMessage(temporaryGlobals.successMessage);
     }
     temporaryGlobals.onSubmit({event, email});
   }
