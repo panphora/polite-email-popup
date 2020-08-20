@@ -81,7 +81,7 @@ function createOutputConfig({
   formAction = "",
   spamPreventionKey = ""
 } = {}) {
-  return `<script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.7.3/dist/polite-email-popup.umd.js"><\/script>
+  return `<script src="https://cdn.jsdelivr.net/npm/polite-email-popup@0.8.0/dist/polite-email-popup.umd.js"><\/script>
 <script>
   PoliteEmailPopup.${typeOfWebsite === "content" ? "contentWebsite" : "marketingWebsite"}({
     ${showDebugNotice ? "showDebugNotice: true," : ""}

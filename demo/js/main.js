@@ -1,28 +1,3 @@
-import PoliteEmailPopup from "../../dist/polite-email-popup.modern.js";
-
-// PoliteEmailForms.contentWebsite();
-// PoliteEmailForms.marketingWebsite();
-
-// PoliteEmailPopup.contentWebsite({
-//   showDebugNotice: true, // remove in production
-//   beSlightlyMoreAggressive: false,
-//   imageSrc: "/demo/images/remake-logo-icon.svg",
-//   headingText: "Sign up for Remake's newsletter",
-//   descriptionText: "Follow Remake's progress as we change web development",
-//   showFormSubmissionNotices: true,
-//   successMessage: "Thank you signing up!",
-//   failureMessage: "Sorry, sign up failed...",
-//   mainButtonText: "Sign up",
-//   closeButtonText: "Close",
-//   mailchimpConfig: {
-//     formAction: undefined, // Your Mailchimp form's action
-//     spamPreventionKey: undefined // Your Mailchimp form's spam prevention key
-//   },
-//   onSubmit: function ({event, email}) {
-//     console.log("FORM SUBMITTED", event, email);
-//   }
-// });
-
 PoliteEmailPopup.contentWebsite({
   showDebugNotice: true, // remove in production
   beSlightlyMoreAggressive: false,
@@ -40,8 +15,5 @@ PoliteEmailPopup.contentWebsite({
     console.log("FORM SUBMITTED", event, email, success);
   }
 });
-
-
-
 
 
