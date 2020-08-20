@@ -1,0 +1,47 @@
+body {
+  line-height: 1.45;
+}
+
+.intro {
+  margin-top: 6rem; 
+  padding: 2.5rem 3rem;
+  font-size: 26px;
+  font-weight: bold;
+  color: #4263EB;
+  background-color: #FFF4E7;
+}
+
+.intro > div {
+  margin-bottom: 2rem;
+}
+
+.intro > div:first-child {
+  color: #e67700;
+  font-style: italic;
+}
+
+.links {
+  margin-bottom: 20rem;
+  padding: 2.5rem 3rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.links > div {
+  margin-bottom: 1rem;
+}
+
+.links a {
+  display: inline-block;
+  color: #fff3bf;
+}
+
+
+
+
+
+
+
+
+
+
