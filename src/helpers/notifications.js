@@ -8,10 +8,10 @@ let notyf = {
 
 domReady(() => {
   notyf = new Notyf({
-    duration: 5000,
+    duration: 8000,
     position: {
       x: "center",
-      y: "top"
+      y: "bottom"
     },
     dismissible: true
   });

@@ -28,7 +28,11 @@ function mailchimpCallback ({event, email, success, message}) {
     }
   } else {
     if (temporaryGlobals.showFormSubmissionNotices) {
-      showErrorMessage(temporaryGlobals.failureMessage);
+      if (!message) {
+        showErrorMessage(temporaryGlobals.failureMessage);
+      } else {
+        showErrorMessage(message);
+      }
     }
   }
 
@@ -53,14 +57,11 @@ function mailchimpAjax ({event, email, formAction}) {
   .then(res => res.json())
   .then(res => {
     if (res.status === "success") {
-      console.log("success");
       mailchimpCallback({event, email, success: true});
     } else {
       if (res.errors.fields.includes("email_address")) {
-        console.log("error:", "Invalid email address");
-        mailchimpCallback({event, email, success: false, message: "Invalid email address"});
+        mailchimpCallback({event, email, success: false, message: "Sign up failed: <br>Invalid email address"});
       } else {
-        console.log("error:", "Failed to subscribe");
         mailchimpCallback({event, email, success: false});
       }
     }
