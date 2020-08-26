@@ -9,7 +9,7 @@ let outputConfigCodeElem = document.querySelector(".output-config__code");
 
 document.addEventListener("click", function (e) {
   if (event.target.closest(".generate-code-button")) {
-    let { formAction, spamPreventionKey } = parseMailchimpConfig();
+    let { formAction, spamPreventionKey, isMailchimp, isConvertKit } = parseMailchimpConfig();
 
     let typeOfWebsite = document.querySelector('input[name="type-of-website"]:checked').value;
     let imageSrc = document.querySelector(".general-config__image-src").value;
@@ -31,6 +31,9 @@ document.addEventListener("click", function (e) {
       successMessage,
       failureMessage,
       beSlightlyMoreAggressive,
+
+      isMailchimp,
+      isConvertKit,
       formAction,
       spamPreventionKey
     });
@@ -48,24 +51,41 @@ function parseMailchimpConfig() {
   }
 
   mailchimpHiddenFormElem.innerHTML = codeString;
-  let formElem = mailchimpHiddenFormElem.querySelector(
-    "#mc_embed_signup > form"
-  );
-  let spamPreventionInput = mailchimpHiddenFormElem.querySelector(
-    "[aria-hidden='true'] input[type='text'][tabindex='-1']"
-  );
 
-  if (formElem && spamPreventionInput) {
-    return {
-      formAction: formElem.action,
-      spamPreventionKey: spamPreventionInput.name
-    };
-  } else {
-    alert("Your Mailchimp form is missing either a <form> or a spam prevention input");
-    return {};
+  let isMailchimp = mailchimpHiddenFormElem.querySelector("#mc_embed_signup");
+  let isConvertKit = mailchimpHiddenFormElem.querySelector(".formkit-form");
+
+  if (isMailchimp) {
+    let formElem = mailchimpHiddenFormElem.querySelector("#mc_embed_signup > form");
+    let spamPreventionInput = mailchimpHiddenFormElem.querySelector("[aria-hidden='true'] input[type='text'][tabindex='-1']");
+
+    if (formElem && formElem.action && spamPreventionInput) {
+      return {
+        isMailchimp: true,
+        formAction: formElem.action,
+        spamPreventionKey: spamPreventionInput.name
+      };
+    } else {
+      alert("Your Mailchimp form is missing either a <form> 'action' attribute or a spam prevention input");
+      return {};
+    }
+  } else if (isConvertKit) {
+    let formElem = mailchimpHiddenFormElem.querySelector("form.formkit-form");
+
+    if (formElem && formElem.action) {
+      return {
+        isConvertKit: true,
+        formAction: formElem.action
+      }
+    } else {
+      alert("Your ConvertKit form is missing a <form> element or a <form> 'action' attribute");
+      return {};
+    }
   }
 
-  mailchimpHiddenFormElem.innerHTML = "";
+  return {};
+
+  // mailchimpHiddenFormElem.innerHTML = "";
 }
 
 function createOutputConfig({
@@ -78,6 +98,9 @@ function createOutputConfig({
   failureMessage = "",
   showDebugNotice = false,
   beSlightlyMoreAggressive = false,
+
+  isMailchimp = false,
+  isConvertKit = false,
   formAction = "",
   spamPreventionKey = ""
 } = {}) {
@@ -92,9 +115,12 @@ function createOutputConfig({
     ${mainButtonText ? `mainButtonText: "${mainButtonText}",` : ""}
     ${successMessage ? `successMessage: "${successMessage}",` : ""}
     ${failureMessage ? `failureMessage: "${failureMessage}",` : ""}
-    ${(formAction && spamPreventionKey) ? `mailchimpConfig: {
+    ${(isMailchimp) ? `mailchimpConfig: {
       formAction: "${formAction}",
       spamPreventionKey: "${spamPreventionKey}"
+    },` : ""}
+    ${(isConvertKit) ? `convertKitConfig: {
+      formAction: "${formAction}"
     },` : ""}
     onSubmit: function ({event, email, success}) {
       // Add any custom code here, like a Google Analytics event

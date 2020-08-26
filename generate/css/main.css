@@ -92,6 +92,10 @@ code {
   min-height: 22em;
 }
 
+.output-config__code {
+  margin-bottom: 1rem;
+}
+
 .generate-code-button {
   font-size: 21px;
   font-weight: bold;
