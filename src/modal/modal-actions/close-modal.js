@@ -2,8 +2,12 @@ import { enableBodyScroll } from 'body-scroll-lock';
 import temporaryGlobals from "../../temporary-globals/temporary-globals";
 import {persistentGlobals} from "../../persistent-globals/persistent-globals";
 import {whenTriggerDataChanges} from "../../trigger-popups/watch-trigger-data";
+import closeBottomBar from "../../bottom-bar/bottom-bar-actions/close-bottom-bar";
 
 export default function closeModal() {
+  // close bottom bar whenever the modal is closed, but don't overwrite its previous close date (if any)
+  closeBottomBar({dontRecordCloseDate: true});
+
   // store date it was clsoed
   persistentGlobals.modalClosedDate = Date.now();
 

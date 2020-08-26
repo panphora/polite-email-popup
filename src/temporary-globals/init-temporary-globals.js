@@ -32,6 +32,7 @@ export default function initTemporaryGlobals (userDefinedGlobals) {
     successMessage: "Thank you signing up!",
     failureMessage: "Sorry, sign up failed...",
     mailchimpConfig: {},
+    convertKitConfig: {},
 
     // SYSTEM GLOBALS
     SELECTORS: SELECTORS,

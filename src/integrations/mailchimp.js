@@ -1,7 +1,7 @@
 import temporaryGlobals from "../temporary-globals/temporary-globals";
 import {showSuccessMessage, showErrorMessage} from "../helpers/notifications";
 
-export function sendEmailToMailChimp ({event, email, spamPreventionKey, formAction, userDefinedCallback}) {
+export function sendEmailToMailChimp ({event, email, spamPreventionKey, formAction}) {
   // Get url for mailchimp
   let url = (formAction || "").replace('/post?', '/post-json?');
 
@@ -12,7 +12,7 @@ export function sendEmailToMailChimp ({event, email, spamPreventionKey, formActi
     data += '&' + inputs[i].name + '=' + encodeURIComponent(inputs[i].value);
   }
 
-  // Add Mailchimps spam prevention key to data
+  // Add Mailchimps spam prevention key to data (key should be set to an empty string)
   data += '&' + spamPreventionKey + '=' + "";
 
   // Create & add post script to the DOM
@@ -24,7 +24,7 @@ export function sendEmailToMailChimp ({event, email, spamPreventionKey, formActi
   let callback = 'mailchimpCallback';
   window[callback] = function(res) {
 
-    // Remove post script from the DOM
+    // Remove script from the DOM after it's called
     delete window[callback];
     document.body.removeChild(script);
 

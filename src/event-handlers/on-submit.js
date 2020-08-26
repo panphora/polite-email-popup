@@ -1,8 +1,9 @@
 import temporaryGlobals from "../temporary-globals/temporary-globals";
 import {sendEmailToMailChimp} from "../integrations/mailchimp";
+import {sendEmailToConvertKit} from "../integrations/convertkit";
 import closeBottomBar from "../bottom-bar/bottom-bar-actions/close-bottom-bar";
 import closeModal from "../modal/modal-actions/close-modal";
-import {showSuccessMessage, showErrorMessage} from "../helpers/notifications";
+import {showSuccessMessage} from "../helpers/notifications";
 
 export function onSubmit (event) {
   event.preventDefault();
@@ -21,11 +22,22 @@ export function onSubmit (event) {
   let emailInputElement = event.currentTarget.querySelector(temporaryGlobals.SELECTORS.BOTTOM_BAR_FORM_INPUT_ELEM_SELECTOR);
   let email = emailInputElement.value;
 
-  // MAILCHIMP integration
-  let {spamPreventionKey, formAction} = temporaryGlobals.mailchimpConfig;
-  if (spamPreventionKey && formAction) {
-    sendEmailToMailChimp({event, email, spamPreventionKey, formAction});
-  } else {
+  if (temporaryGlobals.mailchimpConfig && temporaryGlobals.mailchimpConfig.spamPreventionKey && temporaryGlobals.mailchimpConfig.formAction) {
+    // MAILCHIMP integration
+    sendEmailToMailChimp({
+      event, 
+      email, 
+      spamPreventionKey: temporaryGlobals.mailchimpConfig.spamPreventionKey, 
+      formAction: temporaryGlobals.mailchimpConfig.formAction
+    });
+  } else if (temporaryGlobals.convertKitConfig && temporaryGlobals.convertKitConfig.formAction) {
+    // CONVERTKIT integration
+    sendEmailToConvertKit({
+      event,
+      email,
+      formAction: temporaryGlobals.convertKitConfig.formAction
+    });
+  } else{
     if (temporaryGlobals.showFormSubmissionNotices) {
       showSuccessMessage(temporaryGlobals.successMessage);
     }
