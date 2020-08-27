@@ -537,6 +537,7 @@
   border-radius: 2px;
 }
 
+/* modal - mobile styles */
 @media (max-width: 779.9999px) {
   .email-modal .email-modal__top {
     display: block;
@@ -566,13 +567,11 @@
 }
 
 .bottom-bar .bottom-bar__content {
-  display: flex;
   padding: 10px 0 11px 0;
 }
 
-.bottom-bar .bottom-bar__label {
-  display: flex;
-  align-items: center;
+.bottom-bar__bottom {
+  display: inline-block;
 }
 
 .bottom-bar .bottom-bar__label-text {
@@ -633,20 +632,31 @@
   transform: rotate(-90deg);
 }
 
+@media (max-width: 990px) {
+  .bottom-bar {
+    justify-content: flex-start;
+    padding-left: 1.5rem;
+  }
+}
 
+/* bottom bar - mobile styles */
 @media (max-width: 779.9999px) {
   .bottom-bar.show {
     display: block;
+    justify-content: center;
+    padding-left: 0;
   }
 
   .bottom-bar .bottom-bar__content {
-    align-items: flex-end;
     padding: 15px 21px 21px 22px;
   }
 
-  .bottom-bar .bottom-bar__label {
-    flex: 1 0 auto;
-    display: block;
+  .bottom-bar__bottom {
+    display: flex;
+  }
+
+  .bottom-bar .bottom-bar__sign-up {
+    flex: 0 0 auto;
   }
 
   .bottom-bar .bottom-bar__label-text {
@@ -732,9 +742,6 @@
 .debug-email-forms .debug-email-forms__stat-value--fail {
   color: #e03131;
 }
-
-
-
 
 
 
