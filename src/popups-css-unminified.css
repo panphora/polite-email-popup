@@ -416,7 +416,7 @@
 /* email modal */
 
 .email-modal {
-  z-index: 100;
+  z-index: 2147483647;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -555,7 +555,7 @@
 /* email menu (bottom bar) */
 
 .bottom-bar {
-  z-index: 99;
+  z-index: 2147483647;
   position: fixed;
   left: 0;
   bottom: 0;

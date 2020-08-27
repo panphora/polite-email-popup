@@ -12,11 +12,11 @@ export default function initDomElements () {
     addHtmlToPage("<div class='polite-email-popup__debug-notice'></div>");
   }
 
-  // Add modal to page
-  addHtmlToPage(getModalTemplateString(temporaryGlobals));
-
   // Add bottom bar to page
   addHtmlToPage(getBottomBarTemplateString(temporaryGlobals));
+  
+  // Add modal to page
+  addHtmlToPage(getModalTemplateString(temporaryGlobals));
 
   // Add elements to temporary globals
   initElemGlobals();
