@@ -2,6 +2,8 @@
 
 A customizeable and accessible email sign up form that makes sure visitors are engaged with your content *before* asking for their email addresses.
 
+<a href="https://super-projects.b-cdn.net/polite-popup/videos/polite-demo.mp4" target="_blank"><img src="./demo/images/polite-full-logo-demo-video.png" width="480"></a>
+
 ### Why?
 
 You want to **grow your audience as much as possible, but also be polite about it**.
