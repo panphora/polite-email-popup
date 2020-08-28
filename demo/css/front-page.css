@@ -6,7 +6,7 @@
 
 body {
   line-height: 1.45;
-  padding-bottom: 10rem;
+  padding-bottom: 1rem;
 }
 
 img, video {
@@ -61,7 +61,7 @@ img, video {
 
 .email-sign-up-container {
   max-width: 480px;
-  margin: 0 auto;
+  margin: 0 auto 10rem;
 }
 
 .email-sign-up-label {
@@ -94,6 +94,21 @@ form#email-sign-up button {
 
 form#email-sign-up button:hover {
   background-color: #3156e0;
+}
+
+footer {
+  display: flex;
+}
+
+footer .nav {
+  margin-left: auto;
+}
+
+footer a {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #fff;
+  text-decoration: underline;
 }
 
 
