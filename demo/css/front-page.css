@@ -9,6 +9,11 @@ body {
   padding-bottom: 10rem;
 }
 
+img, video {
+  width: 100%;
+  max-width: 100%;
+}
+
 .intro {
   margin-top: 6rem; 
   padding: 2.5rem 3rem;
@@ -41,6 +46,16 @@ body {
 .links a {
   display: inline-block;
   color: #fff3bf;
+}
+
+.demo-section {
+  margin-bottom: 5rem;
+}
+
+.demo-section__heading {
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 1rem;
 }
 
 
@@ -82,7 +97,11 @@ form#email-sign-up button:hover {
 }
 
 
-
+@media (max-width: 800px) {
+  .intro {
+    margin-top: 0;
+  }
+}
 
 
 
