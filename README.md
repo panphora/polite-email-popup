@@ -2,9 +2,9 @@
 
 A customizeable and accessible email sign up form that pops up when it's polite to do so.
 
-### Reason
+### Why?
 
-You want to grow your audience as much as possible, but also be polite about it.
+You want to **grow your audience as much as possible, but also be polite about it**.
 
 This plugin was made for small businesses and indie makers who want a simple all-in-one solution for collecting email addresses. 
 
