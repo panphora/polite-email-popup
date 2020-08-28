@@ -49,7 +49,7 @@ img, video {
 }
 
 .demo-section {
-  margin-bottom: 5rem;
+  margin-bottom: 13rem;
 }
 
 .demo-section__heading {
@@ -61,7 +61,7 @@ img, video {
 
 .email-sign-up-container {
   max-width: 480px;
-  margin: 0 auto 10rem;
+  margin: 0 auto 3.5rem;
 }
 
 .email-sign-up-label {
@@ -98,6 +98,8 @@ form#email-sign-up button:hover {
 
 footer {
   display: flex;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,.5);
 }
 
 footer .nav {
