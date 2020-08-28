@@ -6,6 +6,7 @@
 
 body {
   line-height: 1.45;
+  padding-bottom: 10rem;
 }
 
 .intro {
@@ -27,7 +28,7 @@ body {
 }
 
 .links {
-  margin-bottom: 20rem;
+  margin-bottom: 2rem;
   padding: 2.5rem 3rem;
   font-size: 24px;
   font-weight: bold;
@@ -43,7 +44,42 @@ body {
 }
 
 
+.email-sign-up-container {
+  max-width: 480px;
+  margin: 0 auto;
+}
 
+.email-sign-up-label {
+  margin-bottom: .5rem;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+form#email-sign-up {
+  display: flex;
+}
+
+form#email-sign-up.email-submitted {
+  border: 1px solid #fff;
+  padding: 1.5rem 2.25rem ;
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+form#email-sign-up input {
+  flex: 1 1 auto;
+  background-color: #fff;
+  color: #222;
+}
+
+form#email-sign-up button {
+  background-color: #2245c7;
+}
+
+form#email-sign-up button:hover {
+  background-color: #3156e0;
+}
 
 
 

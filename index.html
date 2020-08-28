@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Polite Email Popup</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css?v=56790">
   <link rel="stylesheet" href="/demo/css/front-page.css?v=56790">
+  <script src="/demo/js/front-page.js?v=56790" defer></script>
 </head>
 <body>
   <div>
@@ -23,6 +25,15 @@
       <div>
         <a href="https://docs.google.com/document/d/1zBnJ2lj0PW0lkdfggaJytKFnDkggymcDGi4iG09FqPc/edit?usp=sharing" target="_blank">👩‍💻 &nbsp;Read all about it</a>
       </div>
+    </div>
+    <div class="email-sign-up-container">
+      <div class="email-sign-up-label">Want to know when my next product launches? 🐯</div>
+      <form id="email-sign-up">
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="hidden" name="_subject" value="Polite Subscriber" />
+        <input name="email" type="email" placeholder="Your email" required="">
+        <button type="submit">Join newsletter</button>
+      </form>
     </div>
   </div>
 </body>
